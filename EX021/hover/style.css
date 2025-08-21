@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div:hover {
+    color: red;
+}
+
+div:hover > p {
+    display: block;
+    color: white;
+    background-color: red;
+    width: 170px;
+}
+
+div > p {
+    display: none;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: red;
+}
+
+a:visited {
+    color: darkred;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.especial:hover {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
+
+.especial::before {
+    content: '>>';
+    font-weight: lighter;
+}
+
+.especial::after {
+    content: '<<';
+    font-weight: lighter;
+}

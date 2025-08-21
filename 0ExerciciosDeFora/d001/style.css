@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'facebook';
+    src: url(fontes/facebook.otf) format(opentype);
+    font-weight: normal;
+}
+
+/*
+#737373 - meta
+#8A8D91 - links 
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(233, 230, 230);
+    font-family: Helvetica, arial, sans-serif;
+}
+
+header {
+    background-color: rgb(54, 73, 240);
+    min-height: 190px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px;
+    color: white;
+    font-family: 'facebook';
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.377);
+    padding-top: 30px;
+    padding-bottom: 13px;
+}
+
+header p {
+    font-size: 22px;
+    font-family: Helvetica, arial, sans-serif;
+    color: white;
+    max-width: 750px;
+    margin: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.377);
+}
+
+main {
+    background-color: white;
+    padding: 15px 15px 110px 15px;
+    height: 200px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
+    border-radius: 0px 0px 7px 7px;
+    text-align: center;
+    max-width: 385px;
+    min-width: 270px;
+}
+
+main > input[type="text"], input[type="password"] {
+    width: 100%;
+    margin: auto;
+    height: 45px;
+    text-indent: 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /*mudou a borda do imput text e password*/
+}
+
+main .botao:focus {
+    border-color: #1c49c7; /*muda a cor da borda ao ser clicado*/
+    box-shadow: 0 0 2px #1c49c7; /*deixa a borda "brilhante"*/
+    outline: none;
+}
+
+main .avance {
+    font-weight: bold;
+    color: white;
+    background-color: rgb(54, 73, 240);
+    width: 100%;
+    margin: auto;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    border: none;
+    margin-bottom: 15px;
+}
+
+main .avance:hover {
+    background-color: rgb(69, 86, 243);
+}
+
+main .forget {
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 14px;
+    color: rgb(27, 88, 255);
+}
+
+main .forget:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+hr {
+    border: none; /*remove o estilo padrão*/
+    border-top: 1px solid #ccc; /*deixa a linha mais clara*/
+}
+
+main .new {
+    margin-top: 20px;
+    background-color: rgb(9, 190, 9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 160px;
+    height: 44px;
+}
+
+main .new:hover {
+    background-color: rgb(7, 170, 7);
+}
+
+aside {
+    margin-top: 55px;
+}
+
+aside > p {
+    font-size: 14px;
+}
+
+aside a {
+    text-decoration: none;
+    color: #1C1E21;
+    font-weight: 600;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    padding: 25px 40px 0px 40px;
+    position: fixed;
+    bottom: 0px; /*cola na parte de baixo*/
+    height: 175px;
+    left: 0px;
+}
+
+nav > a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #8A8D91;
+    line-height: 1.7em;
+    margin-right: 18px;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+footer hr {
+    margin: 6px 0px;
+    border: none;
+    border-top: 1px solid #d9dadd; 
+}
+
+footer  p {
+    font-size: 11px;
+    color: #737373;
+    margin-top: 20px;
+}
+
+footer .idiomas {
+    margin-right: 7px;
+}

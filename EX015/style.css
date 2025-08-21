@@ -1,0 +1,31 @@
+@charset "UTF-8"; /*Para que não haja problemas com caracteres dentro das minhas CSS*/
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right, #02A676,#008C72,#007369);
+}
+main {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px #001f24cc;
+    width: 600px;
+    padding: 7px;
+    margin: auto;
+}
+
+h1 {
+    color: #003840;
+    text-align: center;
+    text-shadow: 1px 1px 2px #00262ca4;
+}
+
+h2 {
+    color: #005A5B;
+}
+
+p {
+    text-align: justify;
+}

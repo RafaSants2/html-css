@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+@font-face{
+    font-family: 'Poke1';
+    src:url('fontes/Poke1.ttf')
+    format('opentype');
+}
+
+body {
+    background-image: linear-gradient(to bottom, #F23838, #899899, #e7faf6);
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: monospace;
+    font-size: 45px;
+}
+
+.paragrafo{
+    background-color: white;
+    font-size: 20px;
+    text-align: justify;
+    border-radius: 15px;
+    width: 500px;
+    margin: auto;
+    left: 63%;
+    padding: 7px;
+    box-shadow: 5px 5px 15px #656f70a2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    text-align: center;
+}
+
+.pokemons {
+    width: 310px;
+    
+}
+
+.avance {
+    position: absolute;
+    left: 1158px;
+    bottom: 585px;
+    width: 60px;
+}
+
+.volte {
+   position: absolute;
+   left: 700px;
+   bottom: 585px;
+    width: 60px;
+}

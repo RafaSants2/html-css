@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áudio MP3</title>
+</head>
+<body>
+    <h1>Reproduzindo Áudios</h1>
+    <h2>Vamos aprender a reproduzir áudios em HTML5 usando &lt;/audio&gt;</h2>
+    <hr>
+    <h2>Primeira maneira</h2>
+    <audio src="midia/gamesEduUu.mpeg" controls></audio>
+    <hr>
+    <h2>Segunda maneira</h2>
+    <video preload="metadata" controls loop>
+        <source src="midia/gamesEduUu.mpeg" type="audio/mpeg">
+        <!--<source src="midia/gamesEduUu.ogg" type="audio/ogg">-->
+        <!--<source src="midia/gamesEduUu.wav" type="audio/wav">-->
+        <p>Caso nenhum desses funcione, infelizmente o seu navegador não consegue reproduzir áudio. <a href="midia/gamesEduUu.mpeg">Clique aqui</a> para baixar o arquivo MP3</p>
+        <!--COMPÁTIVEIS: MP3, OGG, WAV-->
+    </video>
+</body>
+</html>

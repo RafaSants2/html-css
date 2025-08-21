@@ -1,0 +1,36 @@
+body {
+    font-family: sans-serif;
+    /* 
+    Medidas Absolutas
+    cm, mm, in (polegada), px, pt, pc
+    
+    Medidas Relativas
+    "em" (relativa ao tamanho atual da fonte), "ex" (relativo á altura X de uma fonte), "rem" (relativo á fonte configurada no body), "vw" (largura do viewport/tamanho da sua tela), "vh" (altura da viewport), "%" (porcentagem) etc...
+
+    RECOMENDAÇÕES DA W3C PARA Font-size: 
+        USAR: px, em
+        (16px geralmente = 1em)
+        NÃO USAR: cm, mm, in, pt, pc, ex, rem, vw, vh, %
+    */
+    font-size: 1em;
+    font-weight: normal; /* Peso da fonte*/
+    font-style: italic;
+    text-decoration: underline;
+    /*
+    Peso literais: lighter, normal, bold, bolder
+    Variação de peso com números: 100-900
+    */
+}
+
+h1 {
+    /* shorthand font:
+    - font-style -> font-weight -> font-size -> font-family
+    
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    */
+    font: italic bold 2em Arial, Helvetica, sans-serif;
+}
+

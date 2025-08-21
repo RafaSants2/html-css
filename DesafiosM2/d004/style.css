@@ -1,0 +1,41 @@
+body {
+    background-image: linear-gradient(to bottom, #c300ffcc, #4f00aacc);
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.gustavo {
+    background-color: white;
+    border-radius: 50%;
+    height: 250px;
+    display: block;
+}
+
+p {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: white;
+    padding-right: 9px;
+    padding-bottom: 7px;
+    padding-top: 5px;
+    padding-left: 8px;
+    border-radius: 15px;
+    text-align: justify;
+    display: inline-block;
+}
+
+.linha {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    background-color: white;
+    padding-right: 15px;
+    padding-bottom: 14px;
+    padding-top: 14px;
+    border-radius: 15px;
+    display: inline-block;
+}
