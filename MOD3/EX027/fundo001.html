@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de imagem de fundo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url(imgFundo/wallpaper001.jpg); /*IMAGEM DE FUNDO NO CORPO DA PÁGINA AGORA!*/
+        }
+
+        div.quadrado {
+            display: inline-block; /*deixou os quadrados juntos de lado*/
+           border: 2px solid black;
+           border-radius: 10px;
+           width: 300px;
+           height: 300px;
+           background-color: lightgray;
+        }
+
+        /*TRÊS MANEIRAS DE CONFIGURAR O FUNDO:*/
+        div#q1 {
+            background-color: skyblue; /*<- 1. MANEIRA*/
+        }
+
+        div#q2 {
+            background-image: linear-gradient(to bottom, yellow, orange, red); /*<- 2. MANEIRA (DEGRADÊ)*/
+        }
+
+        div#q3 {
+            background-image: url(imgFundo/pattern003.png); /*<- 3. MANEIRA COM A MESMA PROPRIEDADE DA SEGUNDA (background-image), PÓREM USANDO A FUNÇÃO URL()*/
+        }
+    </style>
+</head>
+<body>
+    <div class="quadrado" id="q1">
+
+    </div>
+    <div class="quadrado" id="q2">
+
+    </div>
+    <div class="quadrado" id="q3">
+
+    </div>
+</body>
+</html>
