@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    table {
+        width: 400px;
+        height: 400px;
+        border-collapse: collapse;
+        margin-bottom: 15px;
+    }
+
+    tr.linha {
+        background-color: lightgray;
+    }
+
+    td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center; /* Alinhamento horizontal*/
+        vertical-align: top; /* Alinhamento Vertical*/
+        /*vertical-align: bottom, middle...*/
+    }
+
+    td.dado {
+        background-color: lightcyan;
+    }
+    /*-----------------------------------------------------------------------------*/
+    table.minhatabela {
+        width: 600px;
+        height: 0px;
+        border-collapse: collapse;
+        margin-bottom: 15px;
+    }
+
+    td.nivel {
+        font-weight: bold;
+        background-color: lightcyan;
+        border: 2px solid black;
+        text-align: center; /* Alinhamento horizontal*/
+    }
+
+    td.mejores {
+        background-image: linear-gradient(to bottom, rgb(245, 245, 168), rgb(255, 187, 161));
+        font-weight: bold;
+    }
+</style>
+<body>
+    <h1>Minha primeira Tabela</h1>
+    <!--
+    HIERARQUIA DE TABELAS (simples): 
+    table = tabela
+        table row = linha de tabela
+            table header = cabeçalho de tabela
+                table data = dado de tabela
+    -->
+    <table>
+        <tr> <!--Primeira linha (table row)-->
+            <td>A1</td> <!--Dado da tabela (table data)-->
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr class="linha"> <!-- Segunda linha -->
+            <td>A2</td>
+            <td>B2</td>
+            <td class="dado">C2</td>
+        </tr>
+        <tr> <!-- Terceira linha -->
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr class="linha"> <!-- Quarta linha -->
+            <td>A4</td>
+            <td class="dado">B4</td>
+            <td>C4</td>
+        </tr>
+    </table>
+    <!-- --------------------------- -->
+    <table class="minhatabela">
+        <tr>
+            <td class="nivel">A+</td>
+            <td class="mejores">Dragão Karma Graciosa</td>
+            <td>Dragão Titã Sombrio</td>
+            <td>Dragão Detonante Cósmico</td>
+        </tr>
+        <tr>
+            <td class="nivel">B+</td>
+            <td>Dragão Violeta</td>
+            <td class="mejores">Dragão Malicia Redentora</td>
+            <td>Dragão Tectônico Nobre</td>
+        </tr>
+        <tr>
+            <td class="nivel">C+</td>
+            <td>Dragão Selvagem</td>
+            <td>Dragão Atalanta</td>
+            <td class="mejores">Dragão Vento Celestial</td>
+        </tr>
+    </table>
+</body>
+</html>
