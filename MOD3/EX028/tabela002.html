@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 7px;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        td.direita {
+            text-align: right;
+        }
+
+        td.centro {
+            text-align: center;
+        }
+
+        thead, tfoot {
+            background-color: lightgray;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        TABLE
+            CAPTION (Legenda da Tabela)
+            THEAD (Área de cima (cabeçalho) da tabela) <- (Não é obrigatório)
+                TR, TD, TH
+            TBODY (Área do corpo da tabela)
+                TR, TD, TH
+            TFOOT (Área do rodapé da tabela) <- (Não é obrigatório)
+                TR, TD, TH
+    -->
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="direita">45.919.040</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="direita">21.169.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="direita">17.264.943</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de habitantes</th>
+                <td class="centro"><strong>84.353.774</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
