@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'dragon_city';
-    src: url(fontes/Draconian.ttf) format(truetype);
+    src: url(../../fontes/Draconian.ttf) format(truetype);
 }
 
 * {
@@ -16,6 +16,7 @@
     --fonte1: 'dragon_city', verdana, cursive, sans-serif;
     --fonte2: 'Quicksand', verdana, cursive, sans-serif;
     --fonte3: 'Cinzel', verdana, cursive, sans-serif;
+    --fonte4: 'Montserrat Alternates', verdana, cursive, sans-serif;
 }
 
 body {
@@ -73,4 +74,54 @@ a:hover {
     color: white;
     border-radius: 5px;
     font-weight: bold;
+}
+
+main {
+    background-color: rgb(245, 245, 211);
+    margin: auto;
+    border: 1px solid rgba(0, 0, 0, 0.212);
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.192);
+    max-width: 600px;
+}
+
+main  h1 {
+    font-family: var(--fonte3);
+    -webkit-text-stroke: 1px black;
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+    background-color: rgb(221, 195, 123);
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.096);
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.281);
+    max-width: 600px;
+    
+}
+
+main img {
+    margin: auto;
+    max-width: 280px;
+    height: auto;
+    background-color: rgb(247, 247, 168);
+    border-radius: 5px;
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.096);
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.281);
+}
+
+main p {
+    background-color: rgb(247, 247, 168);
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.096);
+    text-align: justify;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.2em;
+    font-family: var(--fonte2);
+    font-weight: bold;
+    text-indent: 20px;
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.281);
+    max-width: 600px;
 }
