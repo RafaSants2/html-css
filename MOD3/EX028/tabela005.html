@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 500px;
+            height: 90px;
+            
+        }
+
+        th, td, caption {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .destaque {
+            background-color: lightgrey;
+        }
+
+        col.cnome {
+            background-color: lightgrey;
+        }
+
+        col.cSexoIdade {
+            background-color: antiquewhite;
+        }
+
+        col.cprof {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício de Tabela</h1>
+
+    <table>
+        <!--Novo comando para fazer com que seja destacado uma COLUNA ao invés de uma tabela-->
+        <colgroup>
+            <col class="cnome">
+            <col class="cSexoIdade" span="2"> <!--Esse span az com que uma coluna seja para duas-->
+            <col class="cprof">
+        </colgroup>
+        <!----------------------------------------------------------------------------->
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>F</td>
+            <td>52</td>
+            <td>Aposentada</td>
+        </tr>
+        <tr>
+            <td>Pedro</td>
+            <td>M</td>
+            <td>24</td>
+            <td>Jogador de Futebol</td>
+        </tr>
+        <tr>
+            <td>Mateo</td>
+            <td>M</td>
+            <td>30</td>
+            <td>Programador</td>
+        </tr>
+    </table>
+</body>
+</html>
