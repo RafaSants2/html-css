@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso do iframe</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe {
+            width: 99vh;
+            height: 500px;
+            border: 2px solid black;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est nam amet molestias quas rerum nihil debitis a minus odio porro hic quibusdam consectetur velit dolores delectus magni, perspiciatis deleniti sint.</p>
+
+    <ul>
+        <li><a href="PagExtras/pagina001.html" target="frame">Primeira página</a></li>
+        <li><a href="../../MOD3/EX028/tabela006.html" target="frame">Segunda página</a></li>
+        <li><a href="../../MOD1&2/DesafiosM2/d006/index.html" target="frame">Terceira página</a></li>
+        <li><a href="https://rafasants2.github.io/Exercicio-pessoal/" target="frame">Quarta página</a></li>
+        <!--Usando o parâmetro "name" com um nome qualquer na tag 'iframe' e usando um target nesse link, eu posso fazer com que a página apareça naquele frame.-->
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est nam amet molestias quas rerum nihil debitis a minus odio porro hic quibusdam consectetur velit dolores delectus magni, perspiciatis deleniti sint.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est nam amet molestias quas rerum nihil debitis a minus odio porro hic quibusdam consectetur velit dolores delectus magni, perspiciatis deleniti sint.</p>
+
+    <iframe src="" name="frame">Infelizmente seu navegador não é compátivel com isso.</iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae et voluptates vitae, eaque tempore natus ea sunt quis soluta nemo amet pariatur dignissimos. Optio, odit! Modi a non earum est! Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae et voluptates vitae, eaque tempore natus ea sunt quis soluta nemo amet pariatur dignissimos. Optio, odit! Modi a non earum est!</p>
+</body>
+</html>
