@@ -4,11 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treino Formulário</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <form action="">
-            
+    <div id="central">
+        <form action="" autocomplete="on" method="post">
+            <fieldset>
+                <legend>Sobre você</legend>
+                    <p>
+                        <label for="iname">Nome</label>
+                        <input type="text" id="iname" autocomplete="username" required minlength="10" maxlength="30" placeholder="nome completo">
+                    </p>
+                    <p>
+                        <label for="Iidade">Idade</label>
+                        <input type="number" name="" id="Iidade" required  min="5">
+                    </p>
+                    <p>
+                        <label for="inasc">Data de nascimento</label>
+                        <input type="date" name="" id="inasc" required>
+                    </p>
+                    <p>
+                        <label for="ihora">Hora atual</label>
+                        <input type="time" name="" id="ihora">
+                    </p>
+                    <p>
+                        <label for="iemail">E-mail</label>
+                        <input type="email" name="" id="iemail" required autocomplete="email">
+                    </p>
+                    <p>
+                        <label for="itel">Telefone</label>
+                        <input type="tel" name="" id="itel" required placeholder="(xx)xxxx-xxxx" autocomplete="tel">
+                    </p>
+                    <p>
+                        <input type="submit" value="Enviar" class="botao">
+                        <input type="reset" value="Limpar" class="botao">
+                    </p>
+            </fieldset>
         </form>
     </div>
 </body>

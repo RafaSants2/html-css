@@ -1,0 +1,83 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html, body {
+    height: 98vh;
+    width: 98vw;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#central {
+    position: relative;
+}
+
+form {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+}
+
+fieldset {
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px ;
+}
+
+legend {
+    text-align: center;
+    font-weight: bold;
+}
+
+input {
+    border-radius: 3px;
+    border: 1px solid lightgrey;
+    width: 240px;
+    height: 30px;
+    font-size: 14px;
+    text-indent: 5px;
+    margin-bottom: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: rgb(0, 102, 255);
+    box-shadow: 0 0 2px rgba(114, 114, 238, 0.616);
+}
+
+input[type="number"] {
+    width: 50px;
+}
+
+input[type="time"] {
+    width: 85px;
+}
+
+input[type="tel"] {
+    width: 120px;
+}
+
+input[type="date"] {
+    width: 130px;
+}
+
+.botao {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 120px;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+}
+
+.botao:focus {
+    border-color: red;
+    box-shadow: 0 0 2px rgb(255, 0, 0);
+     background-color: rgb(196, 19, 19);
+}
