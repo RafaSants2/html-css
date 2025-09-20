@@ -4,8 +4,8 @@
 }
 
 html, body {
-    height: 98vh;
-    width: 95vw;
+    height: 100vh;
+    width: 100vw;
 }
 
 body {
@@ -14,6 +14,7 @@ body {
 
 div#central {
     position: relative;
+    height: 100vh;
 }
 
 form {
@@ -21,7 +22,7 @@ form {
 
     left: 50%;
     top: 50%;
-    transform: translate(-50%, 30%);
+    transform: translate(-50%, -50%);
 }
 
 fieldset {
