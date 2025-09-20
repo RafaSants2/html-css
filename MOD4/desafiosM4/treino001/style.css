@@ -5,7 +5,7 @@
 
 html, body {
     height: 98vh;
-    width: 98vw;
+    width: 95vw;
 }
 
 body {
@@ -21,7 +21,7 @@ form {
 
     left: 50%;
     top: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 30%);
 }
 
 fieldset {
@@ -64,6 +64,20 @@ input[type="tel"] {
 
 input[type="date"] {
     width: 130px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: 20px;
+    height: 13px;
+}
+
+input[type="radio"], input[type="checkbox"]:focus {
+    box-shadow: none;
+}
+
+hr {
+    margin-bottom: 15px;
+    border: 1px solid lightgrey;
 }
 
 .botao {
