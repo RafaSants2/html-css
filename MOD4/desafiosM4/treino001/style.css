@@ -4,7 +4,7 @@
 }
 
 html, body {
-    height: 100vh;
+    height: 97vh;
     width: 100vw;
 }
 
@@ -12,22 +12,18 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-div#central {
-    position: relative;
-    height: 100vh;
-}
-
 form {
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    height: auto;
+    margin: auto;
 }
 
 fieldset {
+    margin-top: 20px;
     border-radius: 5px;
-    padding: 10px 15px 10px 15px ;
+    padding: 10px 15px 10px 15px;
 }
 
 legend {
@@ -47,7 +43,7 @@ input {
 
 input:focus {
     outline: none;
-    border-color: rgb(0, 102, 255);
+    border-color: #0066ff;
     box-shadow: 0 0 2px rgba(114, 114, 238, 0.616);
 }
 
@@ -74,6 +70,27 @@ input[type="radio"], input[type="checkbox"] {
 
 input[type="radio"], input[type="checkbox"]:focus {
     box-shadow: none;
+}
+
+input[type="color"] {
+    width: 75px;
+    border-radius: 5px
+}
+
+.center {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+textarea {
+    border: 1px solid lightgrey;
+    padding: 1px 3px 0px 3px;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #0066ff;
+    box-shadow: 0 0 2px rgba(114, 114, 238, 0.616);
 }
 
 hr {
