@@ -70,7 +70,6 @@ main {
     margin: auto;
     border-radius: 5px;
     padding: 10px;
-    height: 80vh;
 }
 
 main > p {
@@ -86,7 +85,7 @@ main > p {
 }
 
 img {
-    width: 70vw;
+    width: 60vw;
     margin: auto;
     display: block;
 }
