@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/* Versão Mobile First */
+
+/*PALETA DE CORES
+preto
+vermelho
+vinho - #6d1b28 (fundo no header)
+darkred
+
+fundo do site = #F5F5F5
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e7e7e7;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    background-color: #6d1b28;
+    color: white;
+    height: 125px;
+}
+
+header > h1 {
+    padding: 15px 0px 15px 5px;
+    font-size: 36px
+}
+
+header input[type='search'] {
+    background-color: #f5f5f5;
+    height: 30px;
+    width: 229px;
+    margin: auto;
+    display: block;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    outline: none;
+}
+
+header input[type='search']:focus {
+    border-color: #e22828; /*muda a cor da borda ao ser clicado*/
+    box-shadow: 0 0 5px #b80606; /*deixa a borda "brilhante"*/
+}
