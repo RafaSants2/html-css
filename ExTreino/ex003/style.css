@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('links/imagem_fundo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    color: white;
+}
+
+ul > li {
+    padding: 0px 0px 20px 5px;
+}
+
+img {
+    display: block;
+    margin: auto;
+    border-radius: 10%;
+}
