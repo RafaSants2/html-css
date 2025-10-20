@@ -52,5 +52,5 @@ header input[type='search'] {
 
 header input[type='search']:focus {
     border-color: #e22828; /*muda a cor da borda ao ser clicado*/
-    box-shadow: 0 0 5px #b80606; /*deixa a borda "brilhante"*/
+    box-shadow: 0 0 8px #b80606b0; /*deixa a borda "brilhante"*/
 }
