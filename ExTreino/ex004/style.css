@@ -29,6 +29,7 @@ body, html {
 header {
     background-color: #6d1b28;
     color: white;
+    width: 100vw;
     height: 125px;
 }
 
@@ -53,4 +54,19 @@ header input[type='search'] {
 header input[type='search']:focus {
     border-color: #e22828; /*muda a cor da borda ao ser clicado*/
     box-shadow: 0 0 8px #b80606b0; /*deixa a borda "brilhante"*/
+}
+
+main {
+    
+}
+
+main div.janela > img {
+    max-width: 160px;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+div.janela {
+    margin: 10px 0px 10px 15px;
+    display: inline-block;
 }
