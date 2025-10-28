@@ -64,7 +64,8 @@ main {
 }
 
 main img {
-    max-width: 100%;
+    max-width: 167px;
+    width: 100%;
     background-color: lightgrey;
     border-radius: 5px;
 
