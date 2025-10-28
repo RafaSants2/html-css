@@ -35,7 +35,8 @@ header {
 
 header > h1 {
     padding: 15px 0px 15px 5px;
-    font-size: 36px
+    font-size: 36px;
+    
 }
 
 header input[type='search'] {
@@ -57,16 +58,26 @@ header input[type='search']:focus {
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    max-width: 400px;
+    margin: auto;
+    display: grid; /*Função: transforma o elemento (geralmente uma div) em um "container de grade", ou seja, um espaço dividido em linhas e colunas onde você pode organizar seus elementos internos.
+    OU SEJA: Sem o grid, os elementos ficam empilhados (um abaixo do outro). 
+    Com o grid, você pode colocá-los lado a lado, em linhas, colunas, etc.
+    */
+
+    grid-template-columns: repeat(2, 1fr); /*Função: define quantas colunas o seu grid terá e qual o tamanho de cada uma.
+    repeat(2, 1fr) → significa “crie 2 colunas, cada uma com 1 fração da largura total”.
+    */
+
     gap: 15px;
+    margin-top: 7px;
+    padding: 0 10px;  /* espaçamento lateral */
 }
 
 main img {
-    max-width: 167px;
-    width: 100%;
     background-color: lightgrey;
     border-radius: 5px;
-
+    width: 100%;
+    height: auto;
+    display: block;
 }
