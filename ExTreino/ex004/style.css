@@ -58,7 +58,7 @@ header input[type='search']:focus {
 }
 
 main {
-    max-width: 450px;
+    max-width: 500px;
     margin: auto;
     display: grid; /*Função: transforma o elemento (geralmente uma div) em um "container de grade", ou seja, um espaço dividido em linhas e colunas onde você pode organizar seus elementos internos.
     OU SEJA: Sem o grid, os elementos ficam empilhados (um abaixo do outro). 
