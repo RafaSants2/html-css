@@ -30,13 +30,28 @@ body, html {
 header {
     background-color: #6d1b28;
     color: white;
-    height: 125px;
+    height: 120px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.247);
 }
 
-header > h1 {
+header div.topo {
+    display: flex; /* coloca tudo na mesma linha */
+    justify-content: space-between; /* separa os lados (esquerda e direita) */
+    align-items: center; /* alinha verticalmente */
+}
+
+div.icons {
+    gap: 7px; /* espaçamento entre os ícones */
+    display: flex; 
+}
+
+.icons i.material-symbols-outlined {
+    font-size: 8.8vw;
+}
+
+header h1 {
     padding: 15px 0px 15px 5px;
-    font-size: 42px;
+    font-size: 38px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.411);
     
 }
@@ -44,7 +59,7 @@ header > h1 {
 header input[type='search'] {
     background-color: #f5f5f5;
     height: 30px;
-    max-width: 250px;
+    max-width: 245px;
     width: 100%;
     margin: auto;
     display: block;
@@ -78,10 +93,10 @@ main {
 main img {
     background-color: lightgrey;
     border-radius: 5px;
-    width: 100%;
-    height: auto;
     display: block;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.247);
+    width: 100%;
+    height: auto;
 }
 
 footer {
