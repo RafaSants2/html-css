@@ -49,6 +49,10 @@ div.icons {
     font-size: 8.8vw;
 }
 
+i.material-symbols-outlined:hover {
+    color: black;
+}
+
 header h1 {
     padding: 15px 0px 15px 5px;
     font-size: 38px;
@@ -99,8 +103,29 @@ main img {
     height: auto;
 }
 
+nav.links {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 25px;
+}
+
+nav a {
+    color: blue;
+    text-decoration: none;
+    padding: 0px 9px 5px 9px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: rgb(65, 65, 245);
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    transition-duration: .3s;
+}
+
 footer {
-    margin-top: 100px;
+    margin-top: 60px;
     background-color: black;
     padding: 20px;
 }
