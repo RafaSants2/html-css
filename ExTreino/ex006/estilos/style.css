@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/*
+P: até 600px
+celular: de 600px até 768px
+tablet: 768px até 992px
+desktop: 992px até 1200px
+grandes telas: acima de 1200px
+
+*/
+
+@media print {
+    article > p {
+    margin: 10px 0px 10px 40px;
+    text-align: justify;
+    }
+
+    article h2 {
+    margin: 0px 0px 5px 40px;
+    }
+
+    article img {
+    width: 100%;
+    }
+}
