@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<!--Empacotamento e fluxo no Flexbox CSS
+ 
+flex-wrap: essa propriedade vai configurar o comportamento dessa cápsula (contêiner/Pai), e como esse Pai vai se comportar? Por padrão, esse flex-wrap está configurado como nowrap (ou seja, flex-wrap: nowrap;), que significa "não encapsule/empacote", isto é, não vai quebrar os conteúdos, e o que isso significa? Vamos supor que o meu contêiner esteja um pouco maior do que deveria estar (com elementos dentro), sobrando um espacinho, se eu diminuir esse contêiner até o limite dos filhos/elementos, nada ocorrerá (isso tanto com nowrap, quanto com outros valores que veremos adiante). Agora, tudo vai começar se eu diminuir a partir dai. Então antes: havia um espaço a mais, ele foi reduzido ao máximo, mas o que acontece se esse contêiner for reduzido ainda mais? os elementos serão encolhidos. OBS: o encolhimento dos elementos/itens dentro de um flexbox irá depender da capacidade do seu encolhimento (do conteúdo que estiver dentro desse flexbox)
+EM RESUMO: com nowrap, significaria dizer para não quebrar os blocos/elementos, fazer com que eles não saiam da sequência que eu ordenei. além de que esse valor (nowrap) é o padrão do flax-wrap (PRIMEIRA IMAGEM).
+
+flex-wrap: wrap; 
+quando se coloca wrap, e diminui o contêiner até o limite, o comportamento é o mesmo ao "nowrap", só que a diferença vez após diminuir mais do que o limite; caso eu faça isso, haverá uma quebra ao elemento mais próximo da direita (se for flex-direction: row;) e vai levá-lo abaixo do primeiro, ou seja, vai quebrar esse elemento no sentido do EIXO TRANSVERSAL DO CROSS-AXIS (de cima para baixo). Entãoa quebra wrap é sempre no sentido do eixo transversal (SEGUNDA IMAGEM). Porém, no lugar de usar "wrap", eu posso usar uma terceira configuração chamada wrap-reverse (ou seja: flex-wrap: wrap-reverse;). 
+
+flex-wrap: wrap-reverse;
+Até o momento em que o espaço do contêiner chega ao limite, o comportamento é igual nos três valores no flex-wrap, mas o que é esse wrap-reverse? Quando ele começar a diminuir (após o espaço já ter chegado ao limite), ele quebrará/encapsulará/ no sentido OPOSTO ao EIXO TRANSVERSAL, então ao invés de ser de cima para baixo, será DE BAIXO PARA CIMA. (TERCEIRA FOTO)
+
+RESUMÃO (flex-wrap: wrap;): (QUARTA FOTO) antes
+(QUINTA FOTO) depois
+
+RESUMÃO (flex-wrap: wrap-reverse;): (SEXTA FOTO) antes
+(SÉTIMA FOTO) depois
+-->
