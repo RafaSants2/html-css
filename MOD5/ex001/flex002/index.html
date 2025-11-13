@@ -4,13 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div.conteiner {
+            background-color: rgb(165, 158, 158);
+            display: flex;
+            flex-direction: row; /*padrão*/
+            margin-bottom: 10px;
+        }
+
+        div.conteiner2 {
+            background-color: rgb(165, 158, 158);
+            display: flex;
+            flex-direction: column; 
+            margin-bottom: 10px;
+        }
+
+        div.conteiner3 {
+           background-color: rgb(165, 158, 158);
+            display: flex;
+            flex-direction: row-reverse; 
+            margin-bottom: 10px;
+        }
+
+        div.conteiner4 {
+           background-color: rgb(165, 158, 158);
+            display: flex;
+            flex-direction: column-reverse; 
+            margin-bottom: 10px;
+        }
+
+        div.item {
+            background-color:rgb(24, 169, 226);
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+    </div>
+    <div class="conteiner2">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+    </div>
+    <div class="conteiner3">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+    </div>
+    <div class="conteiner4">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+    </div>
 </body>
 </html>
 <!--
 DIREÇÕES E EIXOS FLEXBOX:
 
+- flex-direction: Esse configuração de direção é no PAI, ou seja, no contêiner. Há 4 configurações permitidas nesse flex-direction, sendo elas: 
 
+1. flex-direction: row; (padrão): ela é a padrão do flex-direction, isto é, é a cofiguração automática dela após ser usada. "row" significa "linha" (deitada), então a flex-direction normal é a linha deitada. E o normal para nós é um sentido de leitura da ESQUERDA PARA A DIREITA. Então o Flex-direction: row; é da esquerda para a direita no NOSSO idioma (assim como no espanhol e no inglês também). Com isso, há dois pontos importantes que são necessários saber: Uma vez que eu saiba a direção, os elementos serão colocados da esquerda para a direita (->) (PRIMEIRA FOTO). Caso eu use o flex-direction: row-reverse; , eu tenho o modo reverso, que coloca os elementos da DIREITA para a ESQUERDA (<--) (sem falar que continua sendo linha deitada) (SEGUNDA FOTO). Há também a configuração para disposições VERTICAIS (muito usada em celulares), para isso, se usa o 'flex-direction:column' (pense na coluna de uma parade, ela é em pé, certo? então é isso que esse tipo de flex-direction mostra) (TERCEIRA FOTO). com esse flex-direction:column; , os elementos são de cima para baixo (QUARTA FOTO). porém, também existe o 'flex-direction:column-reverse;', que coloca os elementos de baixo para cima (QUINTA FOTO). Quando você escolhe a direção, são criadas DOIS EIXOS importantes:
+
+Eixos (axis): Consideraremos como base um flex-direction: row; (valor padrão), se ele é assim, ele é uma linha deitada da esquerda para a direita. O Primeiro eixo a ser criado automaticamente é o EIXO PRINCIPAL (main-axis), esse eixo gera dois pontos, o ponto inicial e o ponto final (que chamamos de main-start, sendo o ponto da esquerda, e o main-end sendo o ponto da direita) (SEXTA FOTO). Já o outro eixo a ser criado se chama EIXO TRANSVERSAL (Cross-axis), ele também me gerará dois pontos, o cross-start que fica em cima, e o cross-end que fica em baixo. (SÉTIMA FOTO). Então perceba: o MAIN-AXIS é sempre da esquerda para a direita e o CROSS-AXIS de cima para baixo, mas é ai onde está o ponto: o MAIN-AXIS é sempre da esquerda para a direita e o CROSS-AXIS de cima para baixo na configuração do FLEX-DIRECTION: ROW; (e considerando o nosso idioma)
+
+
+RESUMO: 
+para flex-direction: row; quando está configurado no nosso idioma, o Main-axis vai da esquerda para a direita, enquanto o cross-axis de cima para baixo.
+
+para flex-direction: row-reverse; quando está configurado no nosso idioma, o Main-axis vai da direita para a esquerda, enquanto o cross-axis ainda fica de cima para baixo (não há inversão).
+
+para flex-direction: column; , o meu main-axis não é mais horizontal (deitado) e sim vertical, ou seja, vai de cima para baixo (isso com column no nosso idioma), enquanto o cross-axis se transforma em uma linha horizontal (deitada) e vai da esquerda até a direita.
+
+para flex-direction: column-reverse; , o meu main-axis não é mais horizontal (deitado) e sim vertical, ou seja, vai de baixo para cima (isso com column no nosso idioma), enquanto o cross-axis se transforma em uma linha horizontal (deitada) e vai ainda da esquerda até a direita. (OITAVA FOTO)
 -->
