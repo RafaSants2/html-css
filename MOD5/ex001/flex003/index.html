@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flexbox CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        div.conteiner {
+            background-color: rgb(165, 158, 158);
+            display: flex;
+            flex-flow: row nowrap;
+            /*
+            ESCREVER "flex-flow: row nowrap;" É O MESMO QUE ESCREVER =
+            "flex-direction: row;
+            flex-wrap: nowrap;"
+            */
+
+            /*
+            | flex-wrap: wrap-reverse; aqui é a mesma coisa do flex-wrap: wrap; , a unica diferença é que: por ser reverso, o elemento mais próximo da direita não vai quebrar de cima para baixo, ele ainda vai quebrar no sentido do eixo transversal do cross-axis, porém sendo DE BAIXO PARA CIMA, ou seja, ele estará acima, e não abaixo, por isso o "reverse"
+            display: flex;
+            flex-direction: row;
+            */
+            
+            /*
+            | flex-wrap: WRAP; aqui, o comportamento é o mesmo, mas quando for diminuir mais do que o máximo, o elemento NÃO reduz/fica pequeno, e sim vai para baixo (sendo o mais proximo da direita), formando uma coluna, ou seja: vai quebrar esse elemento no sentido do EIXO TRANSVERSAL DO CROSS-AXIS (de cima para baixo).
+            display: flex;
+            flex-direction: row;
+            */
+
+            /*
+            | flex-wrap: NOWRAP; - CONFIGURAÇÃO PADRÃO, por conta disso, quando for diminuido mais do que o máximo, os elementos irão reduzir/ficar pequenos.
+            display: flex;
+            flex-direction: row;
+            */
+        }
+
+        div.item {
+            background-color:rgb(168, 103, 103);
+            border: 1px solid black;
+            text-align: center;
+            flex: auto; /*esse FLEX: AUTO; NÃO permite que haja espaço dentro do contêiner/elemento pai*/
+            
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="conteiner">
+        <div class="item">Exemplo de bloco A</div>
+        <div class="item">Exemplo de bloco B</div>
+        <div class="item">Exemplo de bloco C</div>
+        <div class="item">Exemplo de bloco D</div>
+        <div class="item">Exemplo de bloco E</div>
+        <div class="item">Exemplo de bloco F</div>
+    </div>
 </body>
 </html>
 <!--Empacotamento e fluxo no Flexbox CSS
@@ -15,7 +61,7 @@ flex-wrap: essa propriedade vai configurar o comportamento dessa cápsula (cont�
 EM RESUMO: com nowrap, significaria dizer para não quebrar os blocos/elementos, fazer com que eles não saiam da sequência que eu ordenei. além de que esse valor (nowrap) é o padrão do flax-wrap (PRIMEIRA IMAGEM).
 
 flex-wrap: wrap; 
-quando se coloca wrap, e diminui o contêiner até o limite, o comportamento é o mesmo ao "nowrap", só que a diferença vez após diminuir mais do que o limite; caso eu faça isso, haverá uma quebra ao elemento mais próximo da direita (se for flex-direction: row;) e vai levá-lo abaixo do primeiro, ou seja, vai quebrar esse elemento no sentido do EIXO TRANSVERSAL DO CROSS-AXIS (de cima para baixo). Entãoa quebra wrap é sempre no sentido do eixo transversal (SEGUNDA IMAGEM). Porém, no lugar de usar "wrap", eu posso usar uma terceira configuração chamada wrap-reverse (ou seja: flex-wrap: wrap-reverse;). 
+quando se coloca wrap, e diminui o contêiner até o limite, o comportamento é o mesmo ao "nowrap", só que a diferença vem após diminuir mais do que o limite; caso eu faça isso, haverá uma quebra ao elemento mais próximo da direita (se for flex-direction: row;) e vai levá-lo abaixo do primeiro, ou seja, vai quebrar esse elemento no sentido do EIXO TRANSVERSAL DO CROSS-AXIS (de cima para baixo). Entãoa quebra wrap é sempre no sentido do eixo transversal (SEGUNDA IMAGEM). Porém, no lugar de usar "wrap", eu posso usar uma terceira configuração chamada wrap-reverse (ou seja: flex-wrap: wrap-reverse;). 
 
 flex-wrap: wrap-reverse;
 Até o momento em que o espaço do contêiner chega ao limite, o comportamento é igual nos três valores no flex-wrap, mas o que é esse wrap-reverse? Quando ele começar a diminuir (após o espaço já ter chegado ao limite), ele quebrará/encapsulará/ no sentido OPOSTO ao EIXO TRANSVERSAL, então ao invés de ser de cima para baixo, será DE BAIXO PARA CIMA. (TERCEIRA FOTO)
@@ -25,4 +71,6 @@ RESUMÃO (flex-wrap: wrap;): (QUARTA FOTO) antes
 
 RESUMÃO (flex-wrap: wrap-reverse;): (SEXTA FOTO) antes
 (SÉTIMA FOTO) depois
+
+OBS: existe uma maneira de simplificar tudo isso usando flex-flow, que é uma junção entre flex-direction + flex-wrap (OITAVA FOTO). Vamos supor que eu tenha um contêiner com elementos dentro e, por padrão, ele está com flex-direction: row; e flex-wrap: nowrap;, eu posso simplificar essas duas declarações escrevendo apenas flex-flow: row nowrap; (NONA FOTO).
 -->
