@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+@media (max-width: 430px) {
+    div.main {
+        width: 100%;
+        max-width: 350px;
+    }
+}
