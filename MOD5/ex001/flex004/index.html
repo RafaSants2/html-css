@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralizando usando Flexbox</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box; /*faz com que tudo seja eliminado e o tamanho seja respeitado*/
+        }
+
+        body {
+            background-color: rgb(155, 154, 154);
+        }
+
+        main {
+            background-color: rgb(216, 216, 216);
+            width: 100vw;
+            height: 100vh;
+
+            /*BASTA FAZER ESSAS CONFIGURAÇÕES NO ELEMENTO-PAI QUE SEU ITEM FICARÁ NO CENTRO.*/
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            background-color: white;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Tela de Login</h1>
+        </section>
+    </main>
+</body>
+</html>
+<!--
+CENTRALIZAÇÃO ABSOLUTA USANDO FLEXBOX
+
+Centralizando um item: essas propriedades de hoje serão aplicadas (novamente) ao flex-container, isto é, o elemento pai/contêiner com o objetivo de centralizar as coisas perfeitamente na tela. A vantagem da centralização usando flexbox é: o item que estiver centralizado lá dentro do elemento pai, continuará no centro mesmo que o formato do contêiner seja diferente, sempre aquele item continuará no meio (PRIMEIRA FOTO). Considerando as propriedades padrões do contêiner (flex-direction: row; & flex-wrap: nowrap; [flex-flow: row nowrap;]) e por fazer o direcionamento de linha, sabemos que o main-axis (eixo principal) vem da esquerda para a direita e o cross-axis (eixo transversal) de cima para baixo (por ser flex-direction: row;).
+LEMBRANDO: para ALINHAR as coisas no EIXO PRINCIPAL (main-axis) se usa o justify-content.
+E para ALINHAR os elementos no EIXO TRANSVERSAL (cross-axis) se usa o align-itens.
+- Basicamente, pegarei essas duas propriedades no CONTÊINER que eu quero que o elemento fique centralizado e colocarei as duas propriedades como valor CENTER (SEGUNDA FOTO)
+EXEMPLO (TERCEIRA FOTO)
+OBS: Evite colocar o display: flex; no body como se fosse o seu contêiner pai a fim de centralizar totalmente no meio da tela, crie uma tag especifica.
+-->
