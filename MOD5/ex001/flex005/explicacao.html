@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento de elementos</title>
+</head>
+<body>
+    <h1>Alinhamento de elementos empacotados no Flexbox</h1>
+</body>
+</html>
+<!--
+Conteúdo/Elemento empacotado: basicamente, é aquele que se quebra, ou seja, quando eu uso flex-wrap com o valor "nowrap", os elementos são encolhidos até o seu limite, e quando uso com o valor wrap, a gente quebra o conteúdo, quebrando primeiro pelo elemento mais próximo á direita, fazendo com que ao ser quebrado, seja jogado para baixo (isso se a configuração estiver na padrão, com flex-direction: row). OBS: o valor de hoje também é usado no container/elemento pai.
+
+Align-content (primeira foto):
+-   Alinha os elementos no eixo transversal, mas SOMENTE quando estão empacotados. É diferente do justify-content, que vai alinhar o conteúdo/item dentro do eixo PRINCIPAL (main-axis), enquanto o align-itens alinha itens no EIXO TRANSVERSAL (cross-axis).
+
+----------------------------------------------------------------------------------------------
+
+Valores aceitos pela propriedade align-content:
+- stretch:  O valor padrão que align-content recebe é o stretch (align-content: stretch). O stetch pega primeiro toda a área disponível dentro do conteiner e irá dividir baseado pelo número de linhas (segunda foto). Além disso, ele vai pegar a dimensão do Cross-axis (eixo transversal) de todos os itens e vai puxar esticar para baixo (ou para o lado, depende da direção que vamos trabalhar) (terceira foto). Esse é o valor padrão, é dessa maneira que se comportaria normalmente quando quebramos os elementos numa caixa que tem o cross-axis amplificado. 
+
+- flex-start: pega todos os elementos e coloca eles grudados no cross-start (ou seja, no eixo transversal, o conteúdo é colocado de cima para baixo, se vem primeiro de cima, então é o cross-start, parecido com o eixo-principal que é horizontal/linha deitada, começando da direita á esquerda), então ele pega todos os elementos (inclusive a quebra), coloca tudo em cima e reserva o espaço de baixo grudado no Cross-end para colocar o espaço em branco. (QUARTA FOTO).
+
+- flex-end: é a mesma coisa do flex-star, a única diferença é que todos os elementos serão colocados próximos ao cross-end, enquando no flex´start eram postos no cross-start, enquanto o espaço em branco fica próximo ao cross-start. (QUINTA-FOTO)
+
+- center: ele vai criar espaços em branco no cross start e end, e esses espaços em branco farão com que os itens fiquem alinhados ao centro do cross-axis/eixo transversal (SEXTA FOTO)
+
+Valores de espacejamento -> space-beetween:
+Mesma coisa do justify-content, porém ele pega no eixo transversal. Pegará os primeiros elementos e colocá-los perto do cross-start, vai pegar os últimos elementos e botará perto do cross-end, e o espaço no meio vai ser divido com outros itens que porventura venham a existir. (SÉTIMA FOTO).
+
+space-evenly (que também existia no justify-content): a forma de trabalhar é a mesma á anterior: coloca um espaço no cross-start e end, esse espaço é milimetricamente calculado para que eu coloque os elementos e entre esses elementos também exista o mesmo espaçamento posto anteriormente no cross-start e end (OITAVA FOTO)
+
+space-around: similar ao stretch, comecará dividindo o eixo-transversal em partes iguais, porém, os elementos postos não serão esticados, serão colocados dentro dessas áreas demarcadas, e dentro dessas áreas, os conteúdos/elementos serão centralizados
+(NONA FOTO)
+
+RESUMO:
+- O align-content é diferente do justify-content, já que o align-content alinha os elementos empacotes no eixo-transversal.
+
+- dentro do align-content, há os valores:
+stretch (padrão);
+flex-start;
+flex-end;
+center;
+space-beetween;
+space-evenly;
+space-around
+
+ATENÇÃO(!!!!!):
+O align-content é usado quando você ativa o wrap/wrap-reverse (usando flex-flow ou flex-wrap: wrap; , dado que, por padrão. o conteiner fica com nowrap).
+-->
