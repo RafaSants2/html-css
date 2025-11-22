@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-content</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div.conteiner {
+            display: flex;
+            background-color: lightcyan;
+            height: 300px;
+            flex-flow: row wrap;
+            align-content: space-evenly;
+        }
+
+        div.itens {
+            background-color: lightblue;
+            border: 1px solid black;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>align-content</h1>
+
+    <div class="conteiner">
+        <div class="itens">1</div>
+        <div class="itens">2</div>
+        <div class="itens">3</div>
+        <div class="itens">4</div>
+        <div class="itens">5</div>
+        <div class="itens">6</div>
+        <div class="itens">7</div>
+        <div class="itens">8</div>
+        <div class="itens">9</div>
+
+    </div>
+</body>
+</html>
