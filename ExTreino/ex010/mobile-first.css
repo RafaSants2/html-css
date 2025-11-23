@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+    width: 100vw;
+    height: 98vh;
+}
+
+menu#conteiner {
+    background-color: rgb(245, 222, 163);
+    display: flex;
+    flex-flow: row wrap;
+    
+    
+}
+
+article.itens {
+    background: linear-gradient(to bottom, rgb(66, 66, 66), rgb(90, 90, 90), rgb(134, 134, 134), rgb(156, 156, 156));
+    padding: 10px;
+    margin: 10px 0px 0px 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    
+}
+
+article.itens p {
+    font-size: 11px;
+    text-align: center;
+    padding-bottom: 5px;
+    color: white;
+    text-shadow: 0px 0px 4px black;
+}
+
+article.itens img {
+    border-radius: 10px;
+    border: 3px solid black;
+    background-color: white;
+    
+}
