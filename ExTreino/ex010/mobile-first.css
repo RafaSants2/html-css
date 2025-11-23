@@ -12,11 +12,11 @@ body, html {
 }
 
 menu#conteiner {
-    background-color: rgb(245, 222, 163);
+    background-color: aqua;
     display: flex;
     flex-flow: row wrap;
-    
-    
+    height: 100vh;
+    align-content: flex-start;
 }
 
 article.itens {
@@ -25,7 +25,6 @@ article.itens {
     margin: 10px 0px 0px 10px;
     border-radius: 10px;
     border: 1px solid black;
-    
 }
 
 article.itens p {
