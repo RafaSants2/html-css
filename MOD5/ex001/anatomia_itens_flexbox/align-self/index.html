@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Order</title>
+    <style>
+        div.conteiner {
+            background-color: rgb(165, 158, 158);
+            flex-flow: row wrap;
+            display: flex;
+            height: 400px;
+            align-items: flex-start;
+        }
+
+        div.item {
+            background-color:rgb(168, 103, 103);
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        div#i1 {
+            align-self: flex-end;
+        }
+
+        div#i2 {
+            align-self: auto;
+        }
+        
+        div#i3 {
+            align-self: center;
+        }
+        
+        div#i4 {
+            align-self: flex-start;
+        }
+
+        div#i5 {
+            align-self: stretch;
+        }
+
+        div#i6 {
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+        <div class="item" id="i4">D</div>
+        <div class="item" id="i5">E</div>
+        <div class="item" id="i6">F</div>
+    </div>
+</body>
+</html>
