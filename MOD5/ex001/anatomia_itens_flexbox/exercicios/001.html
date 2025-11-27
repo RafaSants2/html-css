@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+        div.pai {
+            display: flex;
+            flex-flow: row wrap;
+            background-color: lightblue;
+        }
+
+        div.filho {
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(156, 165, 165);
+        }
+
+        div#N1 {
+            order: 3;
+        }
+        div#N2 {
+            order: 1;
+        }
+        div#N3 {
+            order: 5;
+        }
+        div#N4 {
+            order: 2;
+        }
+        div#N5 {
+            order: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="pai">
+        <div class="filho" id="N1">A</div>
+        <div class="filho" id="N2">B</div>
+        <div class="filho" id="N3">C</div>
+        <div class="filho" id="N4">D</div>
+        <div class="filho" id="N5">E</div>
+    </div>
+</body>
+</html>
