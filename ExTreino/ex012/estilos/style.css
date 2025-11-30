@@ -1,0 +1,15 @@
+@media (max-width: 325px) {
+    article#filho {
+        width: 70vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    article p.relato {
+        display: block;
+    }
+
+    article div {
+        width: 300px;
+    }
+}
