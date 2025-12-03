@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-basis: específico</title>
+    <style>
+        div.pai {
+            display: flex;
+            flex-flow: row nowrap;
+            background-color: aqua;
+        }
+
+        div.filho {
+            background-color: bisque;
+            text-align: center;
+            border: 1px solid black;
+
+            flex-basis: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pai">
+        <div class="filho">conteúdo menor</div>
+        <div class="filho">conteúdo um pouco maior</div>
+        <div class="filho">conteúdo maior do que o conteúdo anterior</div>
+    </div>
+</body>
+</html>
