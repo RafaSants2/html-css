@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+<style>
+        div.pai {
+            display: flex;
+            flex-flow: row nowrap;
+            background-color: aqua;
+        }
+
+        div.filho {
+            background-color: bisque;
+            text-align: center;
+            border: 1px solid black;
+
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 0;
+        }
+
+        div#encolhe_o_dobro {
+            flex-grow: 2;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="pai">
+        <div class="filho">A</div>
+        <div class="filho" id="encolhe_o_dobro">B</div>
+        <div class="filho" id="encolhe_o_dobro">C</div>
+        
+    </div>
+</body>
+</html>

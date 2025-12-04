@@ -1,0 +1,31 @@
+CONTROLE DO TAMANHO DE ITENS FLEXÍVEIS (ainda se referindo aos itens, e não ao conteiner pai):
+O que será visto: 
+-   flex: grow (se refere a crescer, crescimento, o quanto algo pode crescer)
+-   flex: shrink (se refere a encolher, o quanto algo pode encolher)
+
+Explicação + exemplo: Vamos supor que tenhamos um conteiner padrão, ou seja, flex-flow: row nowrap; (lembre-se que: é indicado que o seu flex-wrap seja "nowrap", até porque, estamos mexendo com propriedades que podem reduzir ou aumentar os itens, e se eu uso "wrap", eu estaria dando uma ordem para que quando não houvesse mais espaço minimo, os itens se quebrassem no sentido do eixo-transversal). Vamos usar como exemplo que o esse conteiner pai tenha 550px de largura, com 3 elementos dentro configurados usando flex-basis para que cada um tenha 150px (um total de 450px), o que sobraria 100px do conteiner.
+
+- Pode encolher? Pode aumentar?
+Se você quer encolher, use shrink, se quiser aumentar, use grow.
+flex-shrink: 1
+flex-grow: 0
+
+POR PADRÃO, o shrink tem um (1), enquanto o grow zero (0), e o que significa isso? Já que o flex-shrink está como um (1) então Sim, ele pode ENCOLHER, e se o flex-shrink estiver como zero (0), ele NÃO PODE ENCOLHER, qualquer valor diferente de zero e positivo, mostra que é o elemento pode ser encolhido, e também por padrão, todos os itens que tem configurado como flex-grow: 0, significa que não pode crescer. 
+
+Vamos mudar a largura do conteiner, deixando-o com a largura exata baseada no total de itens dentro (450px), se eu diminuir mais do que o necessário, os itens encolheram (o padrão, já que todos os itens possuim flex-shrink: 1), agora fazendo o contrário: se eu aumentar o meu conteiner, os elementos ainda terão o mesmo tamanho, isso porque o flex-grow está como zero (0) para todos os itens, ou seja, os itens não podêm crescer.
+
+Agora, deixaremos como:
+flex-shrink: 1
+flex-grow: 1 (agora, os itens também poderão crescer)
+
+Então se eu aumentar a largura do conteiner, os itens também crescerão. Essa é a configuração usada caso você queira que os seus itens sejam TOTALMENTE FLEXÍVEIS, seja crescendo ou diminuindo. 
+
+Agora, vamos inverter o que era considerado padrão:
+flex-shrink: 0 (com isso, os itens NÃO poderão diminuir)
+flex-grow: 1 
+
+Se eu fizer isso, e reduzir mais do que o necessário o conteiner, os itens quebrarão de forma irregular, saindo de dentro do conteiner, agora, se eu aumentar, ai ocorrerá o que esperavámos, visto que o flex-grow está como um (1)
+
+OBS: flex-grow não funciona apenas se botar nowrap, também é possível usando wrap, mas o ideal é nowrap mesmo
+
+ALGUNS EXEMPLOS usando flex-grow e flex-shrink, mas sem usar valores como 1 ou 0 (vistos no ex001, ex002 etc...)
