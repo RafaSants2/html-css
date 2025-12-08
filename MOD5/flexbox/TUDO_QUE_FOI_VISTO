@@ -1,0 +1,31 @@
+- Conhecimento sobre Flexbox:
+display = flex; (em CONTEINER)
+flex-container = contêiner;
+flex-itens = item (elementos dentro do pai/contêiner)
+-----------------------------------------------------------
+- DIREÇÕES E EIXOS FLEXBOX:
+EIXO-PRINCIPAL;
+EIXO-TRANSVERSAL;
+flex-direction (row, row-reverse, column, column-reverse) (em CONTEINER)
+-----------------------------------------------------------
+- Empacotamento e fluxo no Flexbox CSS (em CONTEINER):
+flex-wrap (nowrap, wrap, wrap-reverse);
+flex-flow (flex-direction + flex-wrap)
+-----------------------------------------------------------
+- CENTRALIZAÇÃO ABSOLUTA USANDO FLEXBOX (em CONTEINER):
+justify-content (EIXO-PRINCIPAL)
+align-itens (EIXO-TRANSVERSAL)
+-----------------------------------------------------------
+- Alinhamento de elementos empacotados no Flexbox (em CONTEINER):
+Align-content
+    dentro do align-content, há os valores:
+stretch (padrão);
+flex-start;
+flex-end;
+center;
+space-beetween;
+space-evenly;
+space-around
+
+OBS: O align-content é usado quando você ativa o wrap/wrap-reverse (usando flex-flow ou flex-wrap: wrap; , dado que, por padrão. o conteiner fica com nowrap).
+-----------------------------------------------------------
