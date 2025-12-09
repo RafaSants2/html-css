@@ -1,23 +1,23 @@
 - Conhecimento sobre Flexbox:
-display = flex; (em CONTEINER)
-flex-container = contêiner;
-flex-itens = item (elementos dentro do pai/contêiner)
+1. display = flex; (em CONTEINER);
+2. flex-container = contêiner;
+3. flex-itens = item (elementos dentro do pai/contêiner)
 -----------------------------------------------------------
 - DIREÇÕES E EIXOS FLEXBOX:
-EIXO-PRINCIPAL;
-EIXO-TRANSVERSAL;
-flex-direction (row, row-reverse, column, column-reverse) (em CONTEINER)
+1. EIXO-PRINCIPAL;
+2. EIXO-TRANSVERSAL;
+3. flex-direction (row, row-reverse, column, column-reverse) (em CONTEINER)
 -----------------------------------------------------------
 - Empacotamento e fluxo no Flexbox CSS (em CONTEINER):
-flex-wrap (nowrap, wrap, wrap-reverse);
-flex-flow (flex-direction + flex-wrap)
+1. flex-wrap (nowrap, wrap, wrap-reverse);
+2. flex-flow (flex-direction + flex-wrap)
 -----------------------------------------------------------
 - CENTRALIZAÇÃO ABSOLUTA USANDO FLEXBOX (em CONTEINER):
-justify-content (EIXO-PRINCIPAL)
-align-itens (EIXO-TRANSVERSAL)
+1. justify-content (EIXO-PRINCIPAL)
+2. align-itens (EIXO-TRANSVERSAL)
 -----------------------------------------------------------
 - Alinhamento de elementos empacotados no Flexbox (em CONTEINER):
-Align-content
+1. Align-content
     dentro do align-content, há os valores:
 stretch (padrão);
 flex-start;
@@ -29,3 +29,31 @@ space-around
 
 OBS: O align-content é usado quando você ativa o wrap/wrap-reverse (usando flex-flow ou flex-wrap: wrap; , dado que, por padrão. o conteiner fica com nowrap).
 -----------------------------------------------------------
+-   Anatomia dos Itens Flexbox (aplicada em itens):
+1. Parte de fora (conteiner) é flex, enquanto a de dentro (itens), não;
+2. order (se refere a ordem de cada item, tendo por padrão 0, ficando na frente aquele que tiver o maior número negativo);
+3. align-self (no cross-axis) 
+    possui:
+    auto (padrão, herda do pai/conteiner);
+    flex-start;
+    flex-end;
+    center;
+    stretch
+-----------------------------------------------------------
+- Propriedade Flex-basis em Flexbox (aplicada em itens):
+1. flex-basis sempre vem com "auto" (padrão);
+Funciona no Eixo-principal;
+2. O tamanho da caixa é definido pelo conteúdo dentro (item);
+Flex-basis pode ser configurado com uma largura fixa/específica;
+3. Caso eu faça com que os meus itens tenham um flex-basis com uma largura maior que a do meu conteiner, haverá uma quebra desproporcional;
+-----------------------------------------------------------
+-   Controle do Tamanho de Itens Flexíveis (aplicada em itens): 
+1. flex: grow (se refere a crescer, crescimento, o quanto algo pode crescer);
+2. flex: shrink (se refere a encolher, o quanto algo pode encolher);
+3. Se usa com um flex-wrap: nowrap, dado que se mexe com uma propriedade que reduz ou aumenta os itens;
+4. Se você quer encolher, use shrink, se quiser aumentar, use grow. PADRÃO:
+flex-shrink: 1
+flex-grow: 0
+5. O que estiver com 0, não surtirá efeito, o que estiver com 1, surtirá efeito;
+6. flex-grow não funciona apenas se botar nowrap, também é possível usando wrap, mas o ideal é nowrap mesmo;
+7. Além de 0 e 1, pode haver o 2, o 3, o 4 etc. Os itens que tiverem flex-grow ou flex-shrink como mais de 1, vai ser aumentado/diminuido tendo como referência outro item.

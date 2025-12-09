@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.pai {
+            display: flex;
+            background-color: aqua;
+            flex-flow: column nowrap;
+            height: 600px;
+        }
+        
+        div.filho {
+            background-color: aquamarine;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid black;
+            flex-grow: 0;
+        }
+
+        #crescer {
+            flex-grow: 2;
+        }
+
+        #crescer_dobro {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="pai">
+        <div class="filho" id="crescer">A</div>
+        <div class="filho" id="crescer_dobro">B</div>
+        <div class="filho">C</div>
+    </div>
+</body>
+</html>

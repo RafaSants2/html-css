@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.pai {
+            display: flex;
+            background-color: aqua;
+            flex-flow: row nowrap;
+            
+        }
+        
+        div.filho {
+            background-color: aquamarine;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid black;
+            flex-shrink: 0;
+            flex-basis: 100px;
+        }
+
+        #diminuir {
+            flex-shrink: 1;
+            flex-basis: 200px;
+        }
+
+        #diminuir_dobro {
+            flex-shrink: 2;
+            flex-basis: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pai">
+        <div class="filho">A</div>
+        <div class="filho" id="diminuir">B</div>
+        <div class="filho" id="diminuir_dobro">C</div>
+    </div>
+</body>
+</html>
