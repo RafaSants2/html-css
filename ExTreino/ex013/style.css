@@ -1,0 +1,13 @@
+body {
+    background-image: url(img/tela_fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+img {
+    width: 70vw;
+    margin: auto;
+    display: block;
+}
