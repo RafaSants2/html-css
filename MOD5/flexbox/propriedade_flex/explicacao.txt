@@ -1,0 +1,38 @@
+- A propriedade flex é uma das mais utilizadas e que é SOMENTE APLICADA AOS ELEMENTOS-ITENS/FILHOS, e aqui será aprendido a simplificar conceitos de flex-basis, grow e shrink.
+
+- Na aula anterior, foi realizado exercicícios usando flex-basis, grow e shrink, usando a propriedade flex, eu posso substituir esses três por uma única coisa.
+
+Ex: Suponhamos que haja 3 itens, e cada um com flex-basis, grow e shrink.
+Primeiro item: 
+    flex-basis: 150px
+    flex-grow: 0
+    flex-shrink: 1
+Segundo item: 
+    flex-basis: 150px
+    flex-grow: 2
+    flex-shrink: 0
+Terceiro item: 
+    flex-basis: 150px
+    flex-grow: 1
+    flex-shrink: 2
+OBS: ISSO SEMPRE NO FILHO, NUNCA NO PAI/CONTEINER
+- No primeiro item, no lugar de colocar três propriedades, coloco apenas: flex: 0 1 150px (o primeiro sempre é GROW, o segundo SHRINK e o terceiro FLEX-BASIS)
+
+No segundo item: flex: 2 0 150px
+
+No terceiro item: flex: 1 2 150px
+
+*Flex = flex-grow + flex-shrink + flex-basis
+
+- OUTRAS FORMAS MAIS SIMPLIFICADAS:
+   flex: 0 1 auto (valor padrão do grow, shrink e basis) 
+        - Caso você queira simplificar ainda mais esse valor padrão, use flex: initial
+
+
+   flex: 0 0 auto - basicamente, se usa quando você não quer que um elemento não cresça e não diminua, ou seja, você o deixa NÂO flexível, e por ter "auto" o seu tamanho vai ser baseado no tamanho do conteiner/pai.
+        - Caso você queira simplificar ainda mais esse valor não-flexivel, use flex: none
+
+    flex: 1 1 auto - é o contrário do flex: 0 0 auto, onde aqui o seu item é totalmente flexível tanto crescendo, quanto diminuindo, sem falar que, por o seu basis ser "auto", o taanho do item por padrão será baseado pelo tamanho do seu conteiner/elemento pai
+        - Caso você queira simplificar ainda mais esse valor mega-flexivel, use flex: auto
+
+    flex: 3 - Há momento onde se usa apenas um valor, esse único valor se refere ao flex-grow. Nesse exemplo, usamos flex: 3, então é como se configurassemos o flex-grow no 3, e o resto? Por não ser específicado, mantêm os seus padrões (sendo flex-shrink: 1 e basis: auto)

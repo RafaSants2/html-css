@@ -57,3 +57,21 @@ flex-grow: 0
 5. O que estiver com 0, não surtirá efeito, o que estiver com 1, surtirá efeito;
 6. flex-grow não funciona apenas se botar nowrap, também é possível usando wrap, mas o ideal é nowrap mesmo;
 7. Além de 0 e 1, pode haver o 2, o 3, o 4 etc. Os itens que tiverem flex-grow ou flex-shrink como mais de 1, vai ser aumentado/diminuido tendo como referência outro item.
+-----------------------------------------------------------
+-   Propriedade Flex (em itens):
+1. Forma simplificada de se usar no lugar de flex-grow, shrink e basis.
+2. flex = flex-grow + flex-shrink + flex-basis
+3. Antes:
+        flex-grow: 0
+        flex-shrink: 1
+        flex-basis: 150px
+   Depois:
+        flex: 0 1 150px 
+4. FORMAS MAIS SIMPLIFICADAS:
+    1. flex: 0 1 auto -> flex: initial (ainda mais simplificado, porém o mesmo que a anterior.)
+
+    2. flex: 0 0 auto -> flex: none (ainda mais simplificado, porém o mesmo que a anterior.)
+
+    3. flex: 1 1 auto -> flex: auto (ainda mais simplificado, porém o mesmo que a anterior.)
+
+    4. flex: 3 -> configura apenas o flex-grow, enquanto o shrink e basis mantêm seus valores padrões.
