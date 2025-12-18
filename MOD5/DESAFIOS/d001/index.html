@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu flexbox</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=dehaze"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 537px)">
 </head>
-<body onresize="mudouTamanho()">
+<body>
     <header>
         <h1>Meu site</h1>
-        <nav>
+        <i id="burguer" class="material-symbols-outlined" onclick="clickMenu()">dehaze</i>
+        <nav id="menu">
             <a href="#">Opção 1</a>
             <a href="#">Opção 2</a>
             <a href="#">Opção 3</a>
             <a href="#">Opção 4</a>
             <a href="#">Opção 5</a>
+            <a href="#">Opção 6</a>
         </nav>
     </header>
     <main>
-        <h2>Teste de Flexbox</h1>
+        <h2>Teste de Flexbox</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id in magni quidem ex, dicta minus voluptatem modi, sint voluptates ipsa eligendi, vel obcaecati asperiores culpa officia ipsum est! Soluta, dolores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum maiores corrupti nihil corporis quae ratione nostrum quod vitae omnis. Unde delectus numquam minima! Laboriosam soluta laborum, harum repellat natus eaque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, doloremque tenetur! Quidem est ad corporis nihil! Eaque doloribus ea reprehenderit fugit aliquam? Odit, error doloremque possimus sed adipisci provident fugiat?</p>
     </main>
 
     <script>
-
+        function clickMenu() {
+            var opcoes = document.getElementById('menu')
+            opcoes = opcoes.classList.toggle("aparecer")
+        }
     </script>
 </body>
 </html>
