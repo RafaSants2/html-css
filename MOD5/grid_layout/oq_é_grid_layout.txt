@@ -1,0 +1,4 @@
+O que é Grid Layout? é um sistema para criação de layout baseado em uma grade bidimensional e otimizado para design de interfaces de usuário. Nesse modelo de grade, os elementos-filhos do contêiner que defina a grade podem ser posicionados livremente em espaços criado na estrutura, quer ela tenha sido definida com suas dimensões flexíveis ou fixas.
+
+Basicamente, o objetivo do grid layout é criar interface, posicionar elementos/itens da grade, de uma forma organizada para que possamos ver o site de uma maneira apresentável em diversos tipos de tela (usando junto com o grid layout, o media-query).
+

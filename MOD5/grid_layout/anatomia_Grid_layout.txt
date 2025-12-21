@@ -1,0 +1,25 @@
+A Anatomia de um Grid:
+
+Grid row: Linha da grade
+Grid line / Line grid: também é Linha da grade
+
+-   Todo grid tem seu fundamento baseado no elemento chamado container (grid container), ou seja, é uma caixa que possui outras caixas dentro. Então quando você vai construir um grid, você precisa colocar uma especificação CSS definida no CONTAINER, sempre no grid-container, porque é aquele que CONTEM os itens. O item que fica dentro desse grid-container é chamado de GRID-ITEM. Quando há vários itens na mesma linha desde o início da grade até o fim da grade (tando de maneira vertical, quanto de maneira horizontal), é dado um nome especifíco para isso, chamado GRID-TRACK, e quando as tracks se cruzam, o ponto de cruzamento é chamado de ITEM DE GRADE.
+
+Quando eu tenho uma track deitada, ela é chamada de ROW TRACK, ou seja, uma trilha de linha, e se for em pé (vertical), é chamada de COLUMN TRACK
+
+grid Lines: Quando eu tenho essas linhas entre os elementos/items, são chamadas de grid lines, podendo ser verticais ou horizontais, dependendo do seu grid-track (se é vertical ou horizontal), além de que elas são numeradas, as grid-lines verticais são numeradas sempre da sua esquerda para a sua direita, a linha mais à esquerda vai ser númerada como "um/1" e a última depende da quantidade de grid-items, claro, e também temos as grid-lines horizontais, que são enumeradas de cima para baixo.
+
+A númeração da grid line pode ser POSITIVA ou NEGATIVA, ou seja, se nos refirimos á númeração de grid-items verticais, que é numerada da esquerda à direita, acaba sendo POSITIVA, mas, se for numerada da DIREITA À ESQUERDA (ou seja, começa de direita e termina na esquerda), ai ela é NEGATIVA, mesma lógica para grid-items horizontais que são numerados de cima para baixo, essa forma é POSITIVA, se fosse NEGATIVA, começaria de baixo para cima. É como se estivessemos falando do row, e column, porém de suas versões reverses (row-reverse, column-reverse) num FlexBox.
+
+Quando eu pego um conjunto de itens e os trato como um agrupamento, eu teho o que chamamos de grid-area.
+
+grid gap: se usa para fazer o espaçamento entre os grid-items.
+
+TUDO QUE FOI VISTO:
+-   diferença entre grid row & grid line / line grid
+-   há o grid container e o grid filho que se encontra dentro do grid conteiner
+-   grid-track
+-   row track & column track
+-   grid lines (o que é e sua forma positiva e negativa)
+-   grid-area
+-   Grid-gap
