@@ -1,0 +1,34 @@
+Propriedades de container para Grids: 
+
+- display
+- grid-template-columns
+- grid-template-rows
+- grid-gap
+
+Vamos supor que tenhamos um grid de 3x tracks e cada track tem 4x line, e na parte externa, haja o grid container, para que isso ocorra (de ter um conteiner pai como grid), devo colocar DISPLAY: GRID; e, automaticamente, tudo o que estiver dentro dele vira grid-itens.
+
+EX: 
+<div class="container">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+    <div class="item">E</div>
+    <div class="item">F</div>
+    <div class="item">G</div>
+</div>
+
+explicação: A div com class "container" terá o display: grid;, fazendo com que ela seja o elemento pai, enquanto as que estiverem dentro sejam elementos-filhos. Como uma div tem por padrão um display: block, ele vai ocupar do inicio até o final do conteiner. O que veremos hoje são Propriedades aplicadas SOMENTE ao conteiner-pai.
+
+configuração no CSS:
+
+div.container {
+    display: grid; (o começo de tudo, o que faz com que o conteiner seja grid)
+
+    grid-template-columns: auto auto; (quando eu uso essa propriedade com dois AUTO junto com display grid, eu estou dizendo ao CSS que o meu container terá DUAS COLUNAS, e se eu colocar um terceiro AUTO nessa propriedade, ai haverá uma terceira coluna, e por ter "auto", automaticamente terão calculado a largura (de cada coluna) para que os três tenham o mesmo tamanho)
+
+    grid-template-rows: 100px 100px 100px; (faz com que cada item tenha 100px, e é repetido mais 2 vezes porque dentro do meu grid-container há 3 colunas, então em cada coluna haverá items de 100px e, por conta disso, o meu container também vai crescer, tendo uma altura de 300px)
+
+    grid-gap: 20px (cria um espaço entre os itens)
+}
+OBS: quando colocamos somente display: grid no container pai, diferente do flex, nada vai ocorrer, isso porque, quando se faz isso, ele se transforma num grid de UMA COLUNA e MÚLTIPLAS LINHAS
