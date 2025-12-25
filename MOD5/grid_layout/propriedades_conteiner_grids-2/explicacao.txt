@@ -1,0 +1,62 @@
+Propriedades do Conteiner Grids parte 2
+
+-   Antes, haviamos vistos já algumas propriedades de conteiner, sendo:
+    display grid;
+    grid-template-columns;
+    grid-template-rows;
+    gap
+
+Agora, veremos mais 4 propriedades no conteiner pai também, sendo:
+    align-items;
+    justify-items;
+    align-content;
+    justify-content
+
+DICA: 
+Para alinhar ITEMS: align-items & justify-items
+Para alinhar o CONTEÚDO (content): align-content & justify-content
+-   Sempre quando queremos alinhar algo vertical, use o align, e se for para alinhar de forma horizontal, justify
+
+Vamos usar o exemplo de anterior de novo:
+<div class="container">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+    <div class="item">E</div>
+    <div class="item">F</div>
+    <div class="item">G</div>
+</div>
+
+A configuração que haviamos feito foi:
+div.container {
+    display: grid; (o começo de tudo, o que faz com que o conteiner seja grid)
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 100px 100px 100px; 
+    grid-gap: 20px (cria um espaço entre os itens)
+}
+----------------------------------------------------------
+align-items: por padrão, ele é configurado com "stretch". O align-items, como o própio nome sugere, se refere aos items, a cada célula/item dentro do meu conteiner-pai (se eu usasse-se no lugar o align-content, eu iria me refirir a TODO O CONJUNTO, GUARDE ISSO NA MEMÓRIA)
+
+O que posso configurar com align-items:
+STRETCH (padrão) - estica o item até que ele caiba na grade;
+START - pega os items e coloca no inicio (como é uma prop que se usa na vertical, então coloca todos eles na parte de cima);
+CENTER - pega os items e os deixam no centro verticalmente
+END - mesma coisa que o start, a diferença é que usando esse, os items ficariam na parte de baixo da vertical.
+
+justify-items:
+STRETCH (padrão) - estica cada item de maneira horizontal;
+START - alinha horizontalmente á esquerda;
+CENTER - alinha horizontalmente no centro;
+END - alinha horizontalmente na direita.
+
+align-content:
+START (padrão) - o start é o valor padrão. Antes, se usava para cada item, mas com content, se refere ao conjunto inteiro. Cola esse conjunto na parte de cima verticalmente (já que é um align);
+CENTER - deixa todo o conjunto centralizado verticalmente.
+END - cola todo o conjunto na parte de baixo verticalmente.
+SPACE-BEETWEEN - como o nome sugere, é o espaço entre eles (de forma vertical, lembre-se sempre);
+SPACE-EVENLY: reposiciona os items e o espaço acima, abaixo e entre eles, serão exatamente O MESMO;
+SPACE-AROUND - significa "espaço AO REDOR/EM VOLTA", ou seja, vai redistribuir verticalmente para que acima e abaixo tenham exatamente o mesmo espaço, enquanto os do meio possuem o dobro do espaço, juntando o de cima e o de baixo
+STRETCH - estica o conjunto verticalmente
+
+justify content: possui todas as coisas que o align-content tem, porém, sendo configurado de forma HORIZONTAL
