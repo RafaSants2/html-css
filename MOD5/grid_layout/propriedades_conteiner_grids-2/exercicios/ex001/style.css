@@ -1,0 +1,13 @@
+div.pai {
+    background-color: lightgrey;
+    border: 2px solid rgb(0, 255, 0);
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 100px 75px;
+    align-items: center;
+}
+
+div.filhos {
+    border: 2px solid red;
+}
