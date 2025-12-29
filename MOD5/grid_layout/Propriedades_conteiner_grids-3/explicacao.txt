@@ -1,0 +1,84 @@
+Nas últimas aulas, vimos, ao todo, 8 propriedades de conteiner do Grid Layout, sendo:
+    display: flex
+    grid-template-columns
+    grid-template-rows
+    gap
+    align-items
+    justify-items
+    align-content
+    justify-conteiner
+
+E agora, veremos os:
+    grid-auto-row
+    grid-auto-column
+    place-items
+    place-content
+    grid-template
+
+OBS: essas últimas três propriedades são simplificadoras.
+
+Vamos usar o exemplo de antes de novo:
+<div class="container">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+    <div class="item">E</div>
+    <div class="item">F</div>
+    <div class="item">G</div>
+    <div class="item">H</div>
+    <div class="item">I</div>
+</div>
+
+A configuração que haviamos feito foi:
+div.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 100px 100px 100px; 
+    
+    grid-auto-row: 100px (Sempre que eu for acrescentar uma linha nova, essa linha automaticamente receberá 100px de altura).
+    
+    grid-auto-column: 100px (Quando eu criar uma coluna nova automaticamente, além de um grid explicito, haverá uma largura de 100px)
+}
+
+Agora, teremos outro exemplo usando as três últimas propriedades que, embora sejam novas, se referem a coisas já vistas antes, visto que essas são apenas formas simplificadas.
+
+<div class="container">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+    <div class="item">E</div>
+    <div class="item">F</div>
+    <div class="item">G</div>
+    <div class="item">H</div>
+    <div class="item">I</div>
+</div>
+
+A configuração que haviamos feito foi:
+div.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 100px 100px 100px; 
+    align-items: stretch
+    justify-items: center
+    align-content: start
+    justify-content: end
+}
+
+AO TODO, PERCEBE-SE 7 PROPRIEDADES DENTRO DO MEU CONTEINER
+
+Eu posso trocar por:
+div.container {
+    display: grid;
+    grid-template: 100px 100px 100px / auto auto auto; (primeiro row, depois column, e essa / é usada para separar ambas)
+
+    place-items: stretch center (o primeiro se refere ao align, enquanto o segundo ao justify);
+
+    place-content: start (align) end (justify);
+}
+
+Então:
+    place-items: align-items & justify-items
+    place-content: align-content & justify-content
+    grid-template: grid-template-rows & grid-template-columns
