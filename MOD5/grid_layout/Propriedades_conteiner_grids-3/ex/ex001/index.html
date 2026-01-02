@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pai {
+            display: grid;
+            background-color: rgb(172, 233, 202);
+            gap: 5px;
+            padding: 5px;
+            grid-template: 50px 50px / auto auto auto;
+            place-content: center center;
+            place-items: center center;
+        }
+
+        .filho {
+            background-color: lightgrey;
+            border: 1px solid black;
+        }
+
+        .filhoSecun {
+            background-color: rgb(114, 168, 170);
+            border: 1px solid black;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="pai">
+        <div class="filho">Div 1</div>
+        <div class="filho">Div 2</div>
+        <div class="filho">Div 3</div>
+        <div class="filho">Div 4</div>
+        <div class="filho">Div 5</div>
+    </div>
+</body>
+</html>
+
+<!--
+grid-auto-row
+grid-auto-column
+place-items
+place-content
+grid-template
+-->

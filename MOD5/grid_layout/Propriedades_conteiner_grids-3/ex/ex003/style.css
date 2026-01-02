@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+div.pai {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: 150px 600px / auto;
+}
+
+header {
+    background-color: beige;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    background-color: blue;
+}
+
+footer {
+    background-color: blueviolet;
+}
