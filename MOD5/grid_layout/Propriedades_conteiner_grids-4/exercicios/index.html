@@ -9,11 +9,10 @@
             border: 3px solid rgb(41, 201, 255);
             display: grid;
             height: 250px;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            grid-template: repeat(3, auto) / repeat(3, auto);
             gap: 10px;
-            place-items: normal normal;
-            place-content: normal normal;
+            place-items: start center;
+            place-content: space-between end;
         }
 
         div.item {

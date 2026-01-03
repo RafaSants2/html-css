@@ -1,0 +1,52 @@
+Nas últimas aulas, vimos, ao todo, 13 propriedades de conteiner do Grid Layout, sendo:
+    display: flex
+    grid-template-columns
+    grid-template-rows
+    gap
+    align-items
+    justify-items
+    align-content
+    justify-conteiner
+    grid-auto-row
+    grid-auto-column
+    place-items
+    place-content
+    grid-template
+
+Agora, veremos duas propriedades de simplificação, que são:
+    função repeat()
+    unidade fraction
+
+Vamos usar o exemplo de antes de novo usando REPEAT:
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+    </div>
+
+configuração que haviamos feito foi:
+    div.container {
+        display: grid;
+        grid-template-columns: repeat(3, auto); -> (É o mesmo que escrever "auto" 3x igual antes. Também posso usar o REPEAT para o ROWS)
+
+        grid-template-rows: repeat(3, 100px);
+    }
+
+OBS: Se eu quiser, também posso fazer usando apenas grid-template, EX: 
+    grid-template: repeat(3, 100px) / repeat(3, auto);
+----------------------------------------------------------------------------
+Usando unidade fracional (fraction):
+-   Imagine um grid-conteiner de 1500px de LARGURA, e eu coloque dentro um grid-template-columns: auto auto auto, e qual a largura? A largura automática, calculada para que eles tenham a mesma largura baseada na largura do grid-conteiner, então por ter ao todo 1500px de largura, e eu ter três colunas dentro desse grid-conteiner, então cada coluna tem uma largura de 500px. Pórem, no lugar de "auto auto auto", eu posso trocar por "1fr 1fr 1fr", mas o que é isso?
+
+1fr: Essa medida "fr" significa fraction (fração). Quando usar um template (seja para colunas ou linhas) e a gente utilizar fração, faremos uma simples conta de soma. No exemplo de cima, o grid-conteiner possui 1500px de largura, usamos três 1fr, então ao todo temos 3fr, com isso ele vai pegar a largura inteira do conteiner e vai dividir em 3x iguais (dando 500px cada um), então quando usar grid, e usar uma das três propriedades de template, use no lugar de "auto" o "1fr", a principal diferença está em poder definir o tamanho individual de uma coluna/linha usando "fr", coisa que não é possivel com "auto", EX:
+    grid-template-columns: 1fr 2fr 1fr; -> ou seja, a coluna do meio tem o tamanho 2x maior da primeira e da última coluna
+
+Vamos usar outro exemplo com um grid-conteiner de 1500px, pórem com um grid-template-columns um pouco diferente:
+
+-   Grid-template-columns: 100px 20% 1fr 1fr; -> a primeira coluna possui 100px, esse "20%" é 20% da largura total do conteiner (sendo então 300px de largura da segunda coluna), e os "1fr" são calculos aqui baseado NO QUE SOBROU, se ao todo já ocupamos 400px, falta ainda 1100px do conteiner, e se ainda faltam 1fr e 1fr, então cada um ocupará 550px, ficando dessa maneira: grid-template-columns: 100px 20% (300px) 1fr (550px) 1fr (550px) OU repeat (2, 1fr); (TOTAL = 1500px)
