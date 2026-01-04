@@ -1,0 +1,35 @@
+Propriedades de itens para Grids (parte 1) -
+    grid-row-star
+    grid-row-end
+    grid-column-start
+    grid-column-end
+
+Relembrando algumas coisas:
+-   Vamos usar um conteiner que tenha 4 colunas de 3 linhas. As linhas são enumeradas verticalmente, enquanto que as colunas são enumeradas horizontalmente (além de que existe a numeração negativa para ambos também). Eu vou pegar esse grid e ao invés de ter doze itens, eu terei 3 grandes áreas. A primeira será chamada de "caixa 1", estando na parte de cima e ocupando a primeira linha horizontalmente, a segunda caixa e a terceira caixa formando um quadrado, isso é, ambos ocupando 4 elementos.
+
+Exemplo:
+.caixa1 {
+    grid-row-start: 1; (isso é, a linha de começo é a que está na primeira numeração VERTICALMENTE)
+
+    grid-row-end: 2; (Linha do final 2, onde ela se encerra, tendo agora seu começo e fim)
+
+    grid-column-start: 1; (linha de inicio, onde começa, porém sendo para colunas e a numeração é HORIZONTAL)
+
+    grid-column-end: 5; (linha final 5, onde se encerra na coluna)
+}
+
+.caixa2 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.caixa3 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    grid-column-start: 3;
+    grid-column-end: 5;
+}

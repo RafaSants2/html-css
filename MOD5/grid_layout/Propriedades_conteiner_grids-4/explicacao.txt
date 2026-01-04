@@ -50,3 +50,20 @@ Usando unidade fracional (fraction):
 Vamos usar outro exemplo com um grid-conteiner de 1500px, pórem com um grid-template-columns um pouco diferente:
 
 -   Grid-template-columns: 100px 20% 1fr 1fr; -> a primeira coluna possui 100px, esse "20%" é 20% da largura total do conteiner (sendo então 300px de largura da segunda coluna), e os "1fr" são calculos aqui baseado NO QUE SOBROU, se ao todo já ocupamos 400px, falta ainda 1100px do conteiner, e se ainda faltam 1fr e 1fr, então cada um ocupará 550px, ficando dessa maneira: grid-template-columns: 100px 20% (300px) 1fr (550px) 1fr (550px) OU repeat (2, 1fr); (TOTAL = 1500px)
+
+TODAS AS PROPRIEDADES DE CONTEINER GRID QUE VIMOS:
+    display: flex
+    grid-template-columns
+    grid-template-rows
+    gap
+    align-items
+    justify-items
+    align-content
+    justify-conteiner
+    grid-auto-row
+    grid-auto-column
+    place-items
+    place-content
+    grid-template
+    função repeat()
+    unidade fraction
