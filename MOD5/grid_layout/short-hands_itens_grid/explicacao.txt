@@ -1,0 +1,89 @@
+Shorthands para itens:
+
+-   Até o momento, vimos 4 propriedades para itens, sendo:
+    grid-row-star
+    grid-row-end
+    grid-column-start
+    grid-column-end
+
+Agora, veremos:
+    span
+    grid-column
+    grid-row
+    grid-area
+
+Vamos usar o exemplo de antes de novo usando REPEAT:
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+    </div>
+
+configuração que haviamos feito foi:
+    div.container {
+        display: grid;
+        grid-template-columns: repeat(4, auto); -> 
+        grid-template-rows: repeat(3, 100px);
+    }
+
+Definindo grid-areas:
+-   Vamos supor que eu queria criar uma caixa que ocupe metade do meu grid e, de forma simplificada, posso fazê-la assim:
+
+.caixa {
+    grid-row-start: 1;
+
+    grid-column-start: 1;
+
+    grid-row-end: span 3; -> ou seja, usando span, você indica a quantidade que foi expandida baseada no row-start, então se começa no row-start: 1, e tendo um span na row-end de 3, seria o mesmo que dizer que o row-end teria 4 (1 + 3 de expansão = 4), o mesmo para colunas
+
+    grid-column-end: span 2; -> o mesmo que dizer que o column-end está com 3, mas nesse caso estou usando span para indicar a quantidade de expansão baseada na column-start (1 + 2 de expansão = 3)
+}
+
+Simplificando declarações (grid-row, grid-column):
+
+ao invés de fazer:
+    .caixa {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 4;
+        grid-column-end: 3;
+    }
+
+Eu posso fazer:
+    .caixa {
+        grid-row: 1 / 4 ou span 3; -> ou seja, start: 1 & end: 4
+
+        grid-column: 1 / 3 ou span 2 -> column-start: 1 & column-end: 3
+    }
+
+Também posso simplificar ainda mais, usando:
+    grid-area: 1 (row-start) / 1 (column-start) / 4 (row-end) / 3 (column-end);
+
+    ou seja: grid-area: 1 / 1 / 4 / 3;
+
+EM RESUMO:
+Forma completa:
+    .caixa {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 4;
+        grid-column-end: 3;
+    }
+
+Forma simplificada 1:
+    .caixa {
+        grid-row: 1 / 4 ou span 3; -> 
+
+        grid-column: 1 / 3 ou span 2 
+    }
+
+Forma simplificada 2:
+    .caixa {
+        grid-area: 1 / 1 / 4 / 3;
+    }
