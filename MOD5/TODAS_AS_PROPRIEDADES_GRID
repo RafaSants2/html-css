@@ -1,0 +1,29 @@
+TODAS AS PROPRIEDADES DE CONTEINER-GRID QUE VIMOS:
+    display: flex
+    grid-template-columns
+    grid-template-rows
+    gap
+    align-items
+    justify-items
+    align-content
+    justify-conteiner
+    grid-auto-row
+    grid-auto-column
+    place-items
+    place-content
+    grid-template
+    função repeat()
+    unidade fraction
+
+TODAS AS PROPRIEDADES DE ITENS-GRID QUE VIMOS:
+    grid-row-star;
+    grid-row-end;
+    grid-column-start;
+    grid-column-end;
+    span;
+
+    grid-column (simplificação de: grid-column-start & grid-column-end);
+
+    grid-row (simplificação de: grid-row-star & grid-row-end);
+
+    grid-area (simplificação de: grid-row-star & grid-row-end & grid-column-start & grid-column-end)
