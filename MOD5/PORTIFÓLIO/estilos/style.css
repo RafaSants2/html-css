@@ -128,7 +128,7 @@ article {
 
 article h2 {
   color: var(--destaque);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 article#video .video-container {
@@ -181,6 +181,64 @@ article#video .video-container {
   height: 100%;
   background-color: var(--destaque-inverso);
   border-radius: 4px;
+}
+
+#formacao-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 15px;
+}
+
+#formacao-container .curso {
+  background-color: var(--fundo-principal);
+  border-radius: 8px;
+  padding-left: 15px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-width 0.3s, border-color 0.5s;
+}
+
+#formacao-container .curso:hover {
+  cursor: pointer;
+  border-left-width: 20px;
+  border-color: var(--destaque);
+}
+
+#formacao-container .periodo {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: var(--texto);
+}
+
+#formacao-container .constituicao {
+  color: var(--destaque-inverso);
+  font-size: 1.1em;
+}
+
+#projeto-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#projeto-container .projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-color 0.5s, border-width 0.5s;
+}
+
+#projeto-container .projeto:hover {
+  border-color: var(--destaque);
+  border-left-width: 15px;
+  cursor: pointer;
+}
+
+#projeto-container .foto {
+  
 }
 
 @media  screen and (min-width: 768px) {
