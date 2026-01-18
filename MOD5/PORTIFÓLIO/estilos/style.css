@@ -39,6 +39,10 @@ header {
   display: flex;
   justify-content: flex-end;
   align-content: center;
+
+  position: sticky; /*sticky significa "grudado", ou seja, a intenção é deixar o Menu fixo */
+  top: 0; /*só com position não funcionaria, então como eu quero que ele fique fixo na parte de cima, eu uso "top" com 0*/
+  z-index: 1; /*por padrão, ele é 0, e se eu o deixo assim, o video como Iframe estaria passando por cima do menu, então usando "z-index: 1" no menu, faz com que o menu esteja acima de todos, tipo num photoshop.*/
 }
 
 nav#menu ul {
@@ -238,11 +242,63 @@ article#video .video-container {
 }
 
 #projeto-container .foto {
-  
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: var(--destaque);
+  color: var(--destaque-inverso);
+  text-align: center;
+  padding: 15px;
+}
+
+footer a {
+  color: var(--texto-inverso);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: var(--destaque-inverso);
 }
 
 @media  screen and (min-width: 768px) {
+  main {
+    grid-template-columns: auto 300px 1fr auto;
+  }
+
+  section#ficha {
+    grid-column: 2 / 3;
+    height: fit-content; /*deixa a altura da ficha do tamanho do conteudo da tela*/
+    position: sticky; /*mesma coisa de antes*/
+    top: 65px
+    }
+
+  section#detalhes {
+    grid-column: 3 / 4;
+  }
+
   #skill-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  #projeto-container .projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #projeto-container .projeto-info {
+    max-width: 80%;
+  }
+
+  #projeto-container .foto {
+    aspect-ratio: 1/1;
+    max-width: 20%;
+    max-height: 200px;
   }
 }
