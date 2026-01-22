@@ -189,17 +189,11 @@ nav a:hover {
     main {
         grid-template-columns: auto 500px 1fr auto;
         grid-template-rows: 100px 1fr;
-        gap: 25px;
+        gap: 10px;
     }
 
     section#dragao-info {
-        border: 1px solid red;
-        
-    }
-
-    main .foto_dragao {
-        border: 1px solid red;
-        
+        align-self: start;
     }
 
     main section#dragao-info {
@@ -208,11 +202,25 @@ nav a:hover {
     }
 
     main section#informacao {
-        grid-column: 3 / 4;
+        grid-column: 2 / span 1;
+        grid-row: 3 / 4;
+    }
+
+    section#informacao .teto {
+        padding: 10px;
     }
 
     main section#descricao {
         grid-column: 3 / 4;
+        grid-row: 1 / 4;
+    }
+
+    section#descricao .teto {
+        padding: 10px;
+    }
+
+    section#descricao > p {
+        line-height: 1.8em;
     }
 
     footer {
@@ -225,4 +233,24 @@ nav a:hover {
     }
 }
 
-/*PRÓXIMO MEDIA: MIN-WIDTH 1173*/
+@media screen and (min-width: 1300px) {
+   main {
+        grid-template-columns: auto 1fr 550px 1fr auto;
+        grid-row: 1fr 1fr;
+   }
+
+   main section#dragao-info {
+        grid-column: 3 / 4;
+        grid-row: 1 / 4;
+   }
+
+   main section#descricao {
+        grid-column: 4 / 5;
+   }
+
+   main section#informacao {
+        grid-column: 2 / 3;
+        grid-row: 1 / 4;
+   }
+
+}
