@@ -4,24 +4,164 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    
 }
 
 body {
     background-color: #212121;
     color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5em;
+    
 }
 
 header {
-    border: 1px solid red;
+    
+    margin-bottom: 10px;
 }
 
 header > img {
-    width: 250px;
+    width: 270px;
     display: block;
     margin: auto;
+    padding: 15px;
 }
 
 main {
     display: grid;
     grid-template-columns: auto 90vw auto;
+    gap: 10px;
+}
+
+section {
+    background-color: #3e4a57;
+    border-radius: 10px;
+}
+
+section#dragao-info {
+   grid-column: 2;
+}
+
+div.teto {
+    background-color: #5e6e80;
+    border-radius: 10px 10px 0px 0px;
+    padding: 3px;
+}
+
+div.teto h1 {
+    font-size: 1.7em;
+}
+
+div#teto-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#teto-flex img {
+    width: 55px;
+}
+div.foto_dragao {
+    display: flex;
+    justify-content: center;
+}
+
+div.foto_dragao img {
+    width: 250px;
+    background-color: #4b5764;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+}
+
+section#informacao {
+    grid-column: 2;
+}
+
+section#informacao .teto {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.9em;
+}
+
+section#informacao div.informacao-flex {
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+}
+
+#informacao div.elementos {
+    padding: 10px;
+}
+
+#informacao div.elementos > img {
+    width: 20px;
+}
+
+div.numero {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+div.numero > p {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+section#descricao {  
+    grid-column: 2;
+}
+
+section#descricao .teto {
+    text-align: center;
+}
+
+section#descricao p {
+    text-indent: 25px;
+    padding: 15px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: auto 90vw auto;
+    margin-top: 40px; /*TEMPORÁRIAMENTE*/
+}
+
+footer nav {
+    grid-column: 2;
+    padding: 10px;
+    background-color: #3e4a57;
+    border-radius: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+    overflow-x: auto; /*cria uma barra de rolagem horizontal*/
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.5em;
+    background-color: #4b5764;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.5s, color 0.5s;
+    padding: 7px;
+    border-radius: 5px;
+
+    
+}
+
+nav a:hover {
+    background-color: #5e6e80;
+    color: rgb(44, 44, 44);
+    text-decoration: underline;
 }
