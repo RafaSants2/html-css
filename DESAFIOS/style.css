@@ -46,12 +46,12 @@ section#dragao-info {
 div.teto {
     background-color: #5e6e80;
     border-radius: 10px 10px 0px 0px;
-    padding: 3px;
+    padding: 7px;
     
 }
 
 div.teto h1 {
-    font-size: 1.7em;
+    font-size: 1.8em;
 }
 
 div#teto-flex {
@@ -69,14 +69,28 @@ div#teto-flex {
 div.foto_dragao {
     display: flex;
     justify-content: center;
+    
 }
 
 div.foto_dragao img {
-    width: 250px;
+    width: 225px;
+    transition: transform 0.3s ease;
+}
+
+div.foto_dragao img:hover {
+    transform: scale(1.1); /*quando passar o mouse em cima da imagem, vai aumentar um pouco suavemente, isso também por conta do transition que usa um transform tendo 0.3s de animação*/
+}
+
+div.foto_dragao .animation-img {
+    display: flex;
+    align-items: center;
+    padding: 15px;
     background-color: #4b5764;
     border-radius: 10px;
     margin: 10px;
-    padding: 5px;
+    border: 5px solid #3e4a57;
+    outline: 5px solid #5e6e80;
+    overflow: hidden; 
 }
 
 section#informacao {
@@ -112,6 +126,42 @@ div.numero {
 div.numero > p {
     font-weight: bold;
     font-size: 1.2em;
+}
+
+section#dados {
+    grid-column: 2
+}
+
+section#dados .teto {
+    margin-bottom: 2px;
+}
+
+section#dados .dados-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dados-flex .velocidade, .tempo-incubacao {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.dados-flex .velocidade, .tempo-incubacao {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.dados-flex .velocidade img {
+    width: 50px;
+    
+}
+
+.dados-flex .tempo-incubacao img {
+    width: 50px;
 }
 
 section#descricao {  
