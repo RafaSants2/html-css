@@ -107,6 +107,7 @@ section#informacao div.informacao-flex {
     justify-content: space-evenly;
     display: flex;
     flex-direction: row;
+    
 }
 
 #informacao div.elementos {
@@ -121,6 +122,7 @@ div.numero {
     display: flex;
     align-items: center;
     gap: 10px;
+    
 }
 
 div.numero > p {
@@ -134,6 +136,7 @@ section#dados {
 
 section#dados .teto {
     margin-bottom: 2px;
+    padding: 10px;
 }
 
 section#dados .dados-flex {
@@ -148,6 +151,7 @@ section#dados .dados-flex {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    padding: 5px;
 }
 
 .dados-flex .velocidade, .tempo-incubacao {
@@ -232,8 +236,8 @@ nav a:hover {
     }
 
     div.flex img {
-        display: inline-block;
         padding: 15px 0px;
+        display: block;
     }
 
     main {
@@ -252,8 +256,13 @@ nav a:hover {
     }
 
     main section#informacao {
+        grid-column: 2 / span 2;
+        grid-row: 4 / 5;
+    }
+
+    main section#dados {
         grid-column: 2 / span 1;
-        grid-row: 3 / 4;
+        grid-row: 3 / span 1;
     }
 
     section#informacao .teto {
@@ -284,23 +293,68 @@ nav a:hover {
 }
 
 @media screen and (min-width: 1300px) {
-   main {
-        grid-template-columns: auto 1fr 550px 1fr auto;
-        grid-row: 1fr 1fr;
-   }
+    header {
+        grid-template-columns: 10px auto 10px;
+        
+    }
 
-   main section#dragao-info {
-        grid-column: 3 / 4;
-        grid-row: 1 / 4;
-   }
+    header > div.flex img {
+        padding: 15px 0px;
+        display: inline-block;
+        width: 300px;
+    }
 
-   main section#descricao {
-        grid-column: 4 / 5;
-   }
+    main {
+            grid-template-columns: auto 1fr 550px 1fr auto;
+        grid-template-rows: 1fr auto 1fr;
+            
+    }
 
-   main section#informacao {
-        grid-column: 2 / 3;
-        grid-row: 1 / 4;
-   }
+    main section#dragao-info {
+            grid-column: 3 / 4;
+            grid-row: 1 / span 4;
+    }
 
-}
+    main section#descricao {
+            grid-column: 4 / 5;
+            grid-row: 1 / span 4;
+    }
+
+    main section#informacao {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+    }
+
+    .informacao-flex {
+            height: 12.2vh;
+            align-items: center;
+    }
+
+    #informacao div.elementos > img {
+            width: 27px;
+    }
+
+    div.numero > img {
+            width: 43px;
+    }
+
+    div.numero > p {
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+
+        section#dados .dados-flex {
+            height: 12.2vh;
+            align-items: center;
+        }
+
+        .dados-flex .velocidade, .tempo-incubacao {
+            padding: 0px;
+        }
+
+    main section#dados {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 2;
+    }
+
+    }
