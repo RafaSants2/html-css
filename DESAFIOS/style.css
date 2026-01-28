@@ -16,15 +16,26 @@ body {
 }
 
 header {
-    
     margin-bottom: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
 }
 
 header img {
     width: 270px;
     display: block;
     margin: auto;
-    padding: 15px;
+    margin: 15px;
+}
+
+header i#icone {
+    align-self: end;
+    border: 1px solid red;
+    padding: 10px;
+    font-size: 30px;
+    
 }
 
 main {
