@@ -305,14 +305,15 @@ nav a:hover {
     }
 
     main {
-            grid-template-columns: auto 1fr 550px 1fr auto;
+        grid-template-columns: auto 1fr 550px 1fr auto;
         grid-template-rows: 1fr auto 1fr;
-            
+        
+        /*gap: 5px; analisarei dps*/
     }
 
     main section#dragao-info {
             grid-column: 3 / 4;
-            grid-row: 1 / span 4;
+            grid-row: 1 / 5;
     }
 
     main section#descricao {
@@ -343,14 +344,14 @@ nav a:hover {
             font-size: 1.4em;
         }
 
-        section#dados .dados-flex {
-            height: 12.2vh;
-            align-items: center;
-        }
+    section#dados .dados-flex {
+        height: 12.2vh;
+        align-items: center;
+    }
 
-        .dados-flex .velocidade, .tempo-incubacao {
-            padding: 0px;
-        }
+    .dados-flex .velocidade, .tempo-incubacao {
+        padding: 0px;
+    }
 
     main section#dados {
         grid-column: 2 / span 1;
