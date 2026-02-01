@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+        <h1 id="name-dragon">Dragão Arqueiro</h1>
         <img src="dr1.png" alt="" id="foto">
         <nav id="galeria-nav">
             <a href="#1">1</a>
@@ -23,6 +23,7 @@
     <script>
         const nav = document.getElementById("galeria-nav");
         const foto = document.getElementById("foto");
+        const dragao = document.getElementById("name-dragon")
 
         nav.addEventListener("click", function (event) { /*Nessa linha 38, está dizendo: "quando clicar no nav, execute essa função de evento. 
         
@@ -71,10 +72,14 @@
                     Inclusive cliques que não são em links
                 */
 
+            if (event.target.tagName !== "H1")return;
+
+
             // identifica qual link foi clicado
             if (event.target.getAttribute("href") === "#1") {
                  foto.src = "dr1.png";
             } else if (event.target.getAttribute("href") === "#2") {
+                dragao.textContent = "Dragão Bolo";
                 foto.src = "dr2.png";
             } else if (event.target.getAttribute("href") === "#3") {
                 foto.src = "dr3.png";
