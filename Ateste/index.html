@@ -4,29 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        img {
-            background-color: lightgrey;
-            margin: 20px;
-        }
-
-        a {
-            background-color: black;
-            color: white;
-            padding: 10px;
-            font-size: 20px;
-            font-weight: bold;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src="dr1.png" alt="" id="foto">
-    <nav class="galeria-nav">
-        <a href="#atual">1</a>
-        <a href="#novo">2</a>
-    </nav>
-
     
+        <img src="dr1.png" alt="" id="foto">
+        <nav id="galeria-nav">
+            <a href="#1">1</a>
+            <a href="#2">2</a>
+            <a href="#3">3</a>
+            <a href="#4">4</a>
+            <a href="#5">5</a>
+            <a href="#6">6</a>
+            <a href="#7">7</a>
+        </nav>
+    
+
+    <script>
+        const nav = document.getElementById("galeria-nav");
+        const foto = document.getElementById("foto");
+
+        nav.addEventListener("click", function (event) { /*Nessa linha 38, está dizendo: "quando clicar no nav, execute essa função de evento. 
+        
+        - Esse .addEventListener("click", ...)" significa: “Fique escutando um evento do tipo click nesse elemento.  
+
+        - Esse "function (event) { ... }" é chamada pelo navegador quando o clique ocorre, e esse "event” é o relatório completo do que aconteceu no cliqu. Pense assim: Você disse: “quando clicar, me conte tudo sobre esse clique”. Ai o navegador responde: “Tá aqui o objeto event com todos os detalhes.”
+
+        esse "event" contém coisas como: Quem foi clicado, onde foi clicado, qual tecla estava pressionada, qual o comportamento padrão. 
+
+        EXEMPLO MENTAL: event.target = quem recebeu o clique | event.type = tipo do evento ("click")*/
+
+            event.preventDefault(); // impede o pulo do link, de forma literal: “Impeça o comportamento padrão desse evento.”
+
+            /*O que preventDefault() faz?
+            Ele diz:
+
+            “Não execute essa ação automática.
+            Deixa que eu controlo o que vai acontecer.”
+            
+            Ou seja:
+
+            o link continua clicável;
+            o evento continua acontecendo;
+            mas não navega;
+            não muda a URL;
+            não rola a página;
+            Você usa o <a> como gatilho, não como navegação.*/
+
+            if (event.target.tagName !== "A") return; /*garante que só <a> dispare a lógica
+                tradução literal: “Se o elemento clicado NÃO for uma tag <a>, pare tudo e saia da função.”, com o return, nada abaixo será executado.
+
+                o que é "event.target"? é o elemento exato que recebeu o clique, ou seja, É onde o mouse tocou.
+
+                exemplo:
+                    Clique no texto do link → event.target é <a>;
+                    Clique num <span> dentro do link → event.target é <span>;
+                    Clique no espaço vazio do nav → event.target é <nav>;
+
+                O que é TagName? é o nome da tag HTML, sempre em MAIÚSCULAS.
+
+                Por que isso:
+                Você colocou o addEventListener no nav.
+
+                Logo: 
+                    Qualquer clique dentro do nav dispara o evento
+                    Inclusive cliques que não são em links
+                */
+
+            // identifica qual link foi clicado
+            if (event.target.getAttribute("href") === "#1") {
+                 foto.src = "dr1.png";
+            } else if (event.target.getAttribute("href") === "#2") {
+                foto.src = "dr2.png";
+            } else if (event.target.getAttribute("href") === "#3") {
+                foto.src = "dr3.png";
+            } else if (event.target.getAttribute("href") === "#4") {
+                foto.src = "dr4.png";
+            } else if (event.target.getAttribute("href") === "#5") {
+                foto.src = "dr5.png";
+            } else if (event.target.getAttribute("href") === "#6") {
+                foto.src = "dr6.png";
+            } else if (event.target.getAttribute("href") === "#7") {
+                foto.src = "dr7.png";
+            }
+            
+            /*if (event.target.getAttribute("href") === "#novo") {
+                 foto.src = "dr2.png";
+            }*/
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+body {
+    background-color: lightslategray;
+}
+
+img {
+    background-color: lightgrey;
+    
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: 7px solid #4b5764;
+    border: 7px solid lightslategray;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+a {
+    background-color: #4b5764;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #5e6e80;
+    color: rgb(44, 44, 44);
+    text-decoration: underline;
+}
