@@ -33,3 +33,11 @@ a:hover {
     color: rgb(44, 44, 44);
     text-decoration: underline;
 }
+
+div img#raridad {
+    width: 50px;
+}
+
+div#elementos img {
+    width: 20px;
+}
