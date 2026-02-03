@@ -41,3 +41,9 @@ div img#raridad {
 div#elementos img {
     width: 20px;
 }
+
+nav a.ativo {
+    background-color: #5e6e80;
+    color: rgb(44, 44, 44);
+    text-decoration: underline;
+}

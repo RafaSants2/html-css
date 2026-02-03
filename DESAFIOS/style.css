@@ -236,6 +236,12 @@ nav a:hover {
     text-decoration: underline;
 }
 
+nav a.ativo {
+    background-color: #5e6e80;
+    color: rgb(44, 44, 44);
+    text-decoration: underline;
+}
+
 @media screen and (min-width: 810px) {
     header {
         display: grid;

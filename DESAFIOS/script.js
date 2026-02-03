@@ -11,6 +11,13 @@ nav.addEventListener("click", function (event) {
     if(event.target.tagName !== "A") return;
     event.preventDefault();
 
+    if (event.target.tagName === "A") {
+        const links = nav.querySelectorAll("a");
+        links.forEach(link => link.classList.remove("ativo"));
+
+        event.target.classList.add("ativo");
+    } /* ISSO FAZ COM QUE, SE O EVENTO FOR DE UMA TAG "A", SERÁ CRIADO UMA VARIAVEL CHAMADA "LINKS" QUE PEGA TODAS AS TAG's "A" NO HTML QUE ESTIVEREM DENTRO DO "NAV", COM ISSO, PARA CADA TAG "A" DENTRO DESSA "NAV", VAI RECEBER UMA CONFIGURAÇÃO NO CSS CHAMADA ".ATIVO", ONDE PODE SER ATIVADE E DESATIVADA A CADA CLICK. */
+
     //PRIMERO -----------------------------------------------
     if (event.target.getAttribute("href") === "#Dragao-arqueiro") {
         nome.textContent = "Dragão Arqueiro";

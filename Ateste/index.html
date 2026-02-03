@@ -48,6 +48,7 @@
         const vel = document.getElementById("velocidade")
         const duracao = document.getElementById("tempo")
         
+        
         nav.addEventListener("click", function (event) { /*Nessa linha 38, está dizendo: "quando clicar no nav, execute essa função de evento. 
         
         - Esse .addEventListener("click", ...)" significa: “Fique escutando um evento do tipo click nesse elemento.  
@@ -97,18 +98,27 @@
 
 
             // identifica qual link foi clicado
+            if (event.target.tagName === "A") {
+                const links = nav.querySelectorAll("a");
+                links.forEach(link => link.classList.remove("ativo"));
+
+                event.target.classList.add("ativo");
+            }
+
             if (event.target.getAttribute("href") === "#1") {
                 dragao.innerText = "Dragão Arqueiro";
                 foto.src = "dr1.png";
-                rareza.src = "raridade/V.png"
-                vel.innerText = "792"
-                duracao.innerText = "23 HORAS"
+                rareza.src = "raridade/V.png";
+                vel.innerText = "792";
+                duracao.innerText = "23 HORAS";
+                links.style.color = "#000000";
             } else if (event.target.getAttribute("href") === "#2") {
                 dragao.innerText = "Dragão Bolo";
                 foto.src = "dr2.png";
                 rareza.src = "raridade/E.png";
                 vel.innerText = "982"
                 duracao.innerText = "14 HORAS"
+                
             } else if (event.target.getAttribute("href") === "#3") {
                 dragao.innerText = "Dragão Chiclete";
                 foto.src = "dr3.png";
@@ -121,26 +131,7 @@
                 rareza.src = "raridade/E.png";
                 vel.innerText = "72"
                 duracao.innerText = "12 HORAS"
-            } else if (event.target.getAttribute("href") === "#5") {
-                dragao.innerText = "Dragão Cristalino";
-                foto.src = "dr5.png";
-                rareza.src = "raridade/V.png"
-                vel.innerText = "792"
-                duracao.innerText = "12 HORAS"
-            } else if (event.target.getAttribute("href") === "#6") {
-                dragao.innerText = "Dragão Terra Puro";
-                foto.src = "dr6.png";
-                rareza.src = "raridade/E.png";
-                vel.innerText = "792"
-                duracao.innerText = "12 HORAS"
-            } else if (event.target.getAttribute("href") === "#7") {
-                dragao.innerText = "Dragão Extrator Mutilação Nobre"
-                foto.src = "dr7.png";
-                rareza.src = "raridade/V.png"
-                vel.innerText = "792"
-                duracao.innerText = "12 HORAS"
             }
-            
             /*if (event.target.getAttribute("href") === "#novo") {
                  foto.src = "dr2.png";
             }*/
