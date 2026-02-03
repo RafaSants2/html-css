@@ -34,7 +34,7 @@ nav.addEventListener("click", function (event) {
         rareza.src = "img/raridade/E.png";
         imgDragon.src = "img/dragao/dr2.png";
         vel.textContent = "861";
-        duracao.textContent = "11 DIA 12 HORAS";
+        duracao.textContent = "1 DIA 12 HORAS";
         numero.textContent = "955";
         descricao.textContent = "O Dragão Bolo não é tão doce quanto parece. Ele é muito invejoso e, se fizerem uma festa e não o convidarem, ele costuma aparecer de penetra. Segundo ele, a festa só começa quando ele chega";
         
