@@ -88,7 +88,7 @@ nav.addEventListener("click", function (event) {
         descricao.textContent = "Dragões Heroicos evoluem para a juventude no nível 10 e tornam-se adultos no nível 20. Como o deus da natureza, esta criatura majestosa é tão poderosa que qualquer planta floresce em suas mãos e a vegetação cresce por onde ele passa. Com dos Dragões Fada sob as asas, ele não desistirá até que suas amadas florestas estejam a salvo.";
     } else if (event.target.getAttribute("href") === "#dragao-porco-espinho") { //CUARTO --------------------------
         nome.textContent = "Dragão Porco-espinho";
-        nome.style.fontSize = "1.8em"
+        nome.style.fontSize = "1.6em"
         rareza.src = "img/raridade/C.png";
         imgDragon.src = "img/dragao/dr4.png";
         vel.textContent = "645";
@@ -115,7 +115,7 @@ nav.addEventListener("click", function (event) {
         descricao.textContent = "Mais duro, mais pedregoso e mais cheio de arestas, o Dragão da Terra Puro é uma visão impressionante. Ele gosta de escalar montanhas, esmagar pedras e de praticamente todas as temperaturas!";
     } else if (event.target.getAttribute("href") === "#dragao-extrator-nobre") { //SÉPTIMO -------------------------------
         nome.textContent = "Dragão Extrator Mutilação Nobre";
-        nome.style.fontSize = "1.2em"
+        nome.style.fontSize = "1em"
         rareza.src = "img/raridade/H.png";
         imgDragon.src = "img/dragao/dr7.png";
         vel.textContent = "985";
@@ -151,7 +151,7 @@ nav.addEventListener("click", function (event) {
         descricao.textContent = "Ahoy, amantes de Dragões! Este Dragão especial será a pérola de sua coleção de Dragões. Suba a bordo e prepare-se para algumas aventuras ousadas no mar!";
     } else if (event.target.getAttribute("href") === "#dragao-encapuzado-nobre") { //DÉCIMO-PRIMERO ---------------------------------------
         nome.textContent = "Dragão Crítico Encapuzado Nobre";
-        nome.style.fontSize = "1.2em"
+        nome.style.fontSize = "1em"
         rareza.src = "img/raridade/H.png";
         imgDragon.src = "img/dragao/dr11.png";
         vel.textContent = "933";
@@ -160,7 +160,7 @@ nav.addEventListener("click", function (event) {
         descricao.textContent = "Trupe Crítica: os ataques normais deles tornam-se acertos críticos! Ao combinar o poder dos quatro cajados Críticos, o Dragão Crítico Encapuzado Nobre dominou a arte dos acertos críticos. Há rumores de que uma quinta fonte de energia repousa sob o seu manto, mas ela ainda não se revelou em combate.";
     } else if (event.target.getAttribute("href") === "#dragao-brilhante") { //DÉCIMO-SEGUNDO ---------------------------------------
         nome.textContent = "Dragão Encouraçado Cintilante";
-        nome.style.fontSize = "1.3em"
+        nome.style.fontSize = "1.1em"
         rareza.src = "img/raridade/M.png";
         imgDragon.src = "img/dragao/dr12.png";
         vel.textContent = "2157";
@@ -178,7 +178,7 @@ nav.addEventListener("click", function (event) {
         descricao.textContent = "Proteja suas abóboras: o sorrateiro Dragão Duende está de olho! Ele é obcecado por roubar todas as abóboras que encontra nos quintais das pessoas. Por isso, o Halloween é a época do ano que ele mais ama.";
     } else if (event.target.getAttribute("href") === "#dragao-marciais") { //DÉCIMO-CUARTO ---------------------------------------
         nome.textContent = "Dragão Artes Marciais";
-        nome.style.fontSize = "1.8em"
+        nome.style.fontSize = "1.6em"
         rareza.src = "img/raridade/R.png";
         imgDragon.src = "img/dragao/dr14.png";
         vel.textContent = "726";
@@ -205,7 +205,7 @@ nav.addEventListener("click", function (event) {
         descricao.textContent = "Este Dragão é tão lendário que nenhuma palavra pode lhe fazer justiça. Esteja ciente: sua vida nunca mais será a mesma depois de encontrar esta criatura feita de lendas.";
     } else if (event.target.getAttribute("href") === "#dragao-terra-duplo") { //DÉCIMO-SEPTIMO ---------------------------------------
         nome.textContent = "Dragão da Terra Duplo";
-        nome.style.fontSize = "1.8em"
+        nome.style.fontSize = "1.7em"
         rareza.src = "img/raridade/V.png";
         imgDragon.src = "img/dragao/dr17.png";
         vel.textContent = "780";
@@ -214,7 +214,7 @@ nav.addEventListener("click", function (event) {
         descricao.textContent = "Não se assuste, não é um terremoto, mas um digno Dragão da Terra Duplo! Os Dragão da Terra Duplos não são conhecidos por sua beleza, mas por seu amor à sujeira e por sua natureza extremamente humilde e honesta. Dragão da Terra Duplo é um dragão Very Rare com a tipagem primária de earth. O Dragão da Terra Duplo também pode aprender movimentos de Earth.";
     } else if (event.target.getAttribute("href") === "#dragao-elementos") { //DÉCIMO-OCTAVO ---------------------------------------
         nome.textContent = "Dragão dos Elementos";
-        nome.style.fontSize = "1.8em"
+        nome.style.fontSize = "1.7em"
         rareza.src = "img/raridade/R.png";
         imgDragon.src = "img/dragao/dr18.png";
         vel.textContent = "726";
@@ -232,7 +232,7 @@ nav.addEventListener("click", function (event) {
         descricao.textContent = "A escuridão agora é dobrada! Duas mentes malignas para armar alguns planos sombrios e quatro olhos observadores para enxergar ainda melhor na zona além da imaginação. O D.Sombrio Puro é um dragão Epic com a tipagem primária de pure. O mesmo também pode aprender movimentos e Dark.";
     } else if (event.target.getAttribute("href") === "#dragao-karma-graciosa") { //VIGÉSIMO ---------------------------------------
         nome.textContent = "Dragão Karma Graciosa";
-        nome.style.fontSize = "1.7em"
+        nome.style.fontSize = "1.6em"
         rareza.src = "img/raridade/M.png";
         imgDragon.src = "img/dragao/dr20.png";
         vel.textContent = "982";
