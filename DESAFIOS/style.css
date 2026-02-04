@@ -35,7 +35,6 @@ header i#icone {
     border: 1px solid red;
     padding: 10px;
     font-size: 30px;
-    
 }
 
 main {
@@ -121,24 +120,28 @@ section#informacao div.informacao-flex {
     
 }
 
-#informacao div.elementos {
+#informacao div#elementos {
     padding: 10px;
+    display: flex;
+    gap: 7px;
 }
 
-#informacao div.elementos > img {
-    width: 20px;
+#informacao div#elementos > img {
+    width: 21px;
+    
 }
 
 div.numero {
     display: flex;
     align-items: center;
     gap: 10px;
-    
+    padding: 10px;
 }
 
 div.numero > p {
     font-weight: bold;
     font-size: 1.2em;
+    
 }
 
 section#dados {
@@ -200,6 +203,9 @@ footer {
     display: grid;
     grid-template-columns: auto 90vw auto;
     margin-top: 40px; /*TEMPORÁRIAMENTE*/
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
 }
 
 footer nav {
@@ -348,7 +354,7 @@ nav a.ativo {
             align-items: center;
     }
 
-    #informacao div.elementos > img {
+    #informacao div#elementos > img {
             width: 27px;
     }
 

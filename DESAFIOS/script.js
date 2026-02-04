@@ -6,6 +6,45 @@ const vel = document.getElementById("velo");
 const duracao = document.getElementById("tempo");
 const numero = document.getElementById("num-dragao");
 const descricao = document.getElementById("desc");
+const elementosPorDragao = {
+    dragao1: ["eletrico.png", "gelo.png", "sombrio.png"],
+    dragao2: ["terra.png", "luz.png", "puro.png", "felicidade.png"],
+    dragao3: ["primordial.png", "planta.png", "luz.png", "mar.png"],
+    dragao4: ["terra.png", "sombrio.png"],
+    dragao5: ["lendario.png"],
+    dragao6: ["terra.png", "puro.png"],
+    dragao7: ["tempo.png", "alma.png", "sombrio.png", "luz.png"],
+    dragao8: ["eletrico.png"],
+    dragao9: ["fogo.png", "gelo.png"],
+    dragao10: ["sombrio.png", "mar.png"],
+    dragao11: ["primordial.png", "alma.png", "sombrio.png", "sonho.png"],
+    dragao12: ["lendario.png", "luz.png", "alma.png", "sonho.png"],
+    dragao13: ["guerra.png", "sombrio.png", "planta.png"],
+    dragao14: ["fogo.png", "eletrico.png"],
+    dragao15: ["luz.png", "metal.png", "fogo.png"],
+    dragao16: ["lendario.png"],
+    dragao17: ["terra.png", "terra.png"],
+    dragao18: ["terra.png", "fogo.png", "mar.png"],
+    dragao19: ["puro.png", "sombrio.png"],
+    dragao20: ["puro.png", "vento.png", "luz.png", "fogo.png"],
+    
+};
+const divElements = document.getElementById("elementos");
+
+function trocarElementos(nomeDragao) {
+    // limpa tudo
+    divElements.textContent = "";
+
+    // percorre os elementos do dragão
+    elementosPorDragao[nomeDragao].forEach(elemento => {
+        const img = document.createElement("img");
+        img.src = `img/elemento/${elemento}`;
+        
+        img.alt = "elemento do Dragão";
+        divElements.appendChild(img);
+    });
+}
+
 
 nav.addEventListener("click", function (event) {
     if(event.target.tagName !== "A") return;

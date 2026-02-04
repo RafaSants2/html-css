@@ -22,18 +22,18 @@
             <p id="número">345</p>
         </div>
 
-        <div id="elementos">
+        <div id="elements">
         <h1>Elementos</h1>
-            <img src="elemento/eletrico.png" alt="">
-            <img src="elemento/felicidade.png" alt="">
-            <img src="elemento/gelo.png" alt="">
+            <div id="elementos">
+                
+            </div>
         </div>
 
         <nav id="galeria-nav">
-            <a href="#1">1</a>
-            <a href="#2">2</a>
-            <a href="#3">3</a>
-            <a href="#4">4</a>
+            <a href="#1" onclick="trocarElementos('dragao1')">1</a>
+            <a href="#2" onclick="trocarElementos('dragao2')">2</a>
+            <a href="#3" onclick="trocarElementos('dragao3')">3</a>
+            <a href="#4" onclick="trocarElementos('dragao4')">4</a>
             <a href="#5">5</a>
             <a href="#6">6</a>
             <a href="#7">7</a>
@@ -47,8 +47,28 @@
         const rareza = document.getElementById("raridad");
         const vel = document.getElementById("velocidade")
         const duracao = document.getElementById("tempo")
-        
-        
+        const elementosPorDragao = {
+            dragao1: ["eletrico.png", "gelo.png", "sombrio.png"],
+            dragao2: ["puro.png", "terra.png", "luz.png", "felicidade.png"],
+            dragao3: ["gelo.png", "terra.png"],
+            dragao4: ["puro.png"]
+        };
+        const divElements = document.getElementById("elementos");
+
+        function trocarElementos(nomeDragao) {
+        // limpa tudo
+        divElements.textContent = "";
+
+        // percorre os elementos do dragão
+        elementosPorDragao[nomeDragao].forEach(elemento => {
+            const img = document.createElement("img");
+            img.src = `img/elemento/${elemento}`;
+            img.alt = "elemento do Dragão";
+            divElements.appendChild(img);
+        });
+        }
+
+
         nav.addEventListener("click", function (event) { /*Nessa linha 38, está dizendo: "quando clicar no nav, execute essa função de evento. 
         
         - Esse .addEventListener("click", ...)" significa: “Fique escutando um evento do tipo click nesse elemento.  
@@ -96,7 +116,7 @@
                     Inclusive cliques que não são em links
                 */
 
-
+            
             // identifica qual link foi clicado
             if (event.target.tagName === "A") {
                 const links = nav.querySelectorAll("a");
