@@ -79,7 +79,28 @@ div#teto-flex {
 div.foto_dragao {
     display: flex;
     justify-content: center;
-    
+    align-items: center;
+    gap: 20px;
+}
+
+div.foto_dragao #arrow-left {
+    font-size: 45px;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+div.foto_dragao #arrow-right {
+    font-size: 45px;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+#arrow-left:hover {
+    color: #b0b0b1;
+}
+
+#arrow-right:hover {
+    color: #b0b0b1;
 }
 
 div.foto_dragao img {
@@ -329,24 +350,35 @@ nav a.ativo {
 
     main {
         grid-template-columns: auto 1fr 550px 1fr auto;
-        grid-template-rows: 1fr auto 1fr;
+        grid-template-rows: 169px 169px;
         
         /*gap: 5px; analisarei dps*/
     }
 
     main section#dragao-info {
-            grid-column: 3 / 4;
-            grid-row: 1 / 5;
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+        
     }
 
     main section#descricao {
-            grid-column: 4 / 5;
-            grid-row: 1 / span 4;
+        grid-column: 4 / 5;
+        grid-row: 1 / 3;
+    }
+
+    section#descricao p {
+        font-size: 1.06em;
+        padding: 10px;
     }
 
     main section#informacao {
-            grid-column: 2 / 3;
-            grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    main section#dados {
+        grid-column: 2 / span 1;
+        grid-row: 2 / 3;
     }
 
     .informacao-flex {
@@ -376,8 +408,11 @@ nav a.ativo {
         padding: 0px;
     }
 
-    main section#dados {
-        grid-column: 2 / span 1;
-        grid-row: 3 / span 2;
+}
+
+@media screen and (min-width: 1400px) {
+    section#descricao p {
+        font-size: 1.1em;
+        padding: 15px;
     }
 }

@@ -6,6 +6,8 @@ const vel = document.getElementById("velo");
 const duracao = document.getElementById("tempo");
 const numero = document.getElementById("num-dragao");
 const descricao = document.getElementById("desc");
+const botao_left = document.getElementById("arrow-left")
+const botao_right = document.getElementById("arrow-right")
 const elementosPorDragao = {
     dragao1: ["eletrico.png", "gelo.png", "sombrio.png"],
     dragao2: ["terra.png", "luz.png", "puro.png", "felicidade.png"],
@@ -44,7 +46,6 @@ function trocarElementos(nomeDragao) {
         divElements.appendChild(img);
     });
 }
-
 
 nav.addEventListener("click", function (event) {
     if(event.target.tagName !== "A") return;
