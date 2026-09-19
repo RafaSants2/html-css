@@ -1,0 +1,37 @@
+@charset "UTF-8"; 
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*body {
+    background-image: url("imgFundo/wallpaper002.jpg");
+    background-repeat: no-repeat;
+}*/
+
+div.bloco {
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    background-image: url("imgFundo/wallpaper003.jpg"); /*Por padrão, a imagem vem da esquerda superior*/
+}
+
+div#q1 {
+    background-position: left top; /*Este é o padrão ao usar a propriedade background-image com url, a imagem colocada vem na esquerda superior (left top) sendo o "left" a posição VERTICAL e o "top" sendo a posição HORIZONTAL, mas é possível mudar esse padrão*/
+}
+
+div#q2 {
+    background-position: left center;
+}
+
+div#q3 {
+    background-position: right bottom;
+}
+
+div#q4 {
+    background-position: center center;
+}
+

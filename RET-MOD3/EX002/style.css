@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("imgFundo/wallpaper002.jpg");
+    background-repeat: no-repeat; /*com isso, posso fazer com que a imagem não se repita, tendo apenas uma de fundo*/
+    
+}

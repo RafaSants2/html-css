@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("imgFundo/pattern004.png");
+}
+
+div.quadrado {
+    border: 2px solid black;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: lightgrey;
+}
+
+div#q1 {
+    background-color: skyblue; /*cor de fundo normal*/
+}
+
+div#q2 {
+    background-image: linear-gradient(to bottom, rgb(243, 243, 36), rgb(243, 185, 77)); /*cor de fundo degradê*/
+}
+
+div#q3 {
+    background-image: url('imgFundo/pattern001.png'); /*IMAGEM DE FUNDO*/
+}
