@@ -1,15 +1,14 @@
 @charset "UTF-8";
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    background-image: url(imgFundo/wallpaper003.jpg);
     height: 100vh;
-    background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
     background-repeat: no-repeat;
-    background-size: 100px;
     background-position: center center;
 }

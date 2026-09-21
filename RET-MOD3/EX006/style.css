@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+    background-image: url(imgFundo/wallpaper002.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    /*background-size: auto; <-- PADRÃO*/
+    /*background-size: contain; <-- Faz com que a imagem seja 100% exibida, porém, quanto mais eu reduzo a tela, mais pequeno fica, fazendo com que ainda hajam cortes.*/
+    background-size: cover; /*Pro nosso caso, esse é o melhor porque realmente cobre tudo, embora possa picotar caso a imagem seja grande de mais.*/
+    background-attachment: fixed; /*com fixed, posso deixar a imagem fixa enquanto rolo o conteúdo do site, o padrão é Scroll*/
+}
+
+main {
+    background-color: white;
+    max-width: 400px;
+    padding: 10px;
+    text-align: justify;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+main h1 {
+    text-align: center;
+}
