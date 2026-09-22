@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    /*position: relative; PADRÃO*/
+    height: 500px;
+    background-color: purple;
+    padding: 10px;
+}
+
+#conteudo {
+    /*position: absolute; PADRÃO se esse for o counteúdo dentro de algo relativo*/
+    position: absolute;
+    height: 200px;
+    background-color: blue;
+    width: 400px;
+    border-radius: 10px;
+    
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*usando left e top com 50%, consigo deixar o ponto de referencia do meu conteúdo no meio, se eu realmente quero deixar o conteúdo centralizado verticalmente, ai eu uso a propriedade transform com "translate" em -50%, -50%*/
+}
