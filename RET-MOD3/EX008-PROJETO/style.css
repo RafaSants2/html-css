@@ -5,3 +5,73 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body {
+    background-color: lightgrey;
+    min-height: 100vh;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /*muito boa para deixar as letras maisculas*/
+    font-size: 4em;
+    font-family: monospace;
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(115, 115, 253);
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em; /*espaçamento de linhas*/
+    padding-left: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.image {
+    background-color: rgb(58, 57, 57);
+    color: white;
+}
+
+section.image > p {
+    background-color: rgba(0, 0, 0, 0.288);
+    width: 400px;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    
+}
