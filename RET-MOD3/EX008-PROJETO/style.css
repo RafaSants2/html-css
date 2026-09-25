@@ -25,7 +25,7 @@ header {
 header > h1 {
     padding-top: 50px;
     font-variant: small-caps; /*muito boa para deixar as letras maisculas*/
-    font-size: 4em;
+    font-size: 5vw;
     font-family: monospace;
 }
 
@@ -50,7 +50,11 @@ section {
     line-height: 2em; /*espaçamento de linhas*/
     padding-left: 30px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2em;
+    font-size: 3.5vw;
+}
+
+section > p {
+    padding-bottom: 2em;
 }
 
 section.normal {
@@ -61,11 +65,31 @@ section.normal {
 section.image {
     background-color: rgb(58, 57, 57);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.432); /*sombra interna*/
 }
 
 section.image > p {
-    background-color: rgba(0, 0, 0, 0.288);
+    background-color: rgba(0, 0, 0, 0.397);
     width: 400px;
+    padding: 5px;
+    display: inline-block;
+    text-shadow: 2px 1px 0px black;
+}
+
+section#img1 {
+    background-image: url(imgFundo/wallpaper002.jpg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section#img2 {
+    background-image: url(imgFundo/wallpaper002.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 footer {
