@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas Grandes / Efeito Zebrado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tabelas Grandes com Efeito Zebrado</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        TABLE
+        CAPTION (legenda)
+            THEAD
+                TR, TD, TH -> scope="col" or scope="row" 
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -->
+    <table>
+        <caption><strong>População das Unidades Federativas</strong></caption>
+
+        <thead>
+            <tr>
+                <th scope="col">Estado</th> <!--Se usa scope com "col" no th para indicar que os dados (td) estão na mesma coluna do meu cabeçalho-->
+                <th scope="col" class="pop">População</th> 
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 160 791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17 264 943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 873 064</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 433 957</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 377 239</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th> <!--Se usa scope com "row" no th para indicar que os dados (td) estão na mesma linha do meu cabeçalho-->
+                <td class="num"><strong>122 028 043</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

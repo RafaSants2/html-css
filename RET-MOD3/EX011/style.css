@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 400px;
+    margin: auto;
+}
+
+caption {
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: rgb(230, 224, 224);
+}
+
+th {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+td.num {
+    text-align: right;
+}
+
+thead, tfoot {
+    background-color: rgb(230, 224, 224);
+}
+
+th.pop {
+    width: 60px;
+}
+
+tbody > tr:nth-child(2n) {
+    background-color: lightgray;
+}
+
+/*
+Usamos uma pseudo-classe usada ":nth-child(2n)" nos tr para fazer o efeito zebrado usando um background-color, mas o que significa esse "(2n)"? ele mostra que, de duas em duas linhas (tr), seu background-color vai mudar, criando assim o efeito zebrado, mas se você quiser que seja a cada 3 linhas, é só trocar "2n" por "3n" que o background-color diferente só irá aparecer na terceira linha/tr. Também posso colocar no lugar de "2n" o "odd" (impar) ou "even" (par)
+*/
