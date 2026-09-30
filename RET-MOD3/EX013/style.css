@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+table {
+    width: 500px;
+    margin: auto;
+    border-collapse: separate;
+}
+
+caption {
+    color: white;
+    font-weight: bolder;
+    font-size: 2.5em;
+    font-variant: small-caps;
+    padding: 20px;
+}
+
+thead > tr > th{
+    background-color: greenyellow;
+    height: 40px;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 7px;
+    background-color: white;
+}
+
+.green {
+    background-color: rgb(135, 201, 37);
+}

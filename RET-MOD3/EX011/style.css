@@ -18,6 +18,7 @@ table {
     border-collapse: collapse;
     width: 400px;
     margin: auto;
+    position: relative;
 }
 
 caption {
@@ -42,7 +43,20 @@ td.num {
 }
 
 thead, tfoot {
-    background-color: rgb(230, 224, 224);
+    background-color: rgb(46, 45, 45);
+    color: white;
+    text-shadow: 1px 1px 2px 7px black;
+}
+
+thead > tr > th {
+    background-color: rgb(46, 45, 45);
+    color: white;
+    text-shadow: 1px 1px 2px 7px black;
+    position: sticky; 
+    top: -1px;
+    /*
+    para fazer com que o cabeçalho esteja fixo enquanto rolo a tabela, uso position "sticky" que significa "colável", e em seguida um "top: 0;" ou "top: -1;", para que seja colável na parte superior. 
+    */
 }
 
 th.pop {
