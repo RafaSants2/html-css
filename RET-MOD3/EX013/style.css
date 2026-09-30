@@ -31,7 +31,6 @@ thead > tr > th{
 }
 
 td, th {
-    border: 1px solid black;
     text-align: center;
     padding: 7px;
     background-color: white;
