@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+p {
+    text-align: justify;
+    padding: 5px;
+}
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+
+    margin: auto;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: lightgrey;
+}
+
+.produto {
+    text-align: left;
+}
+
+div#container {
+    overflow-x: auto; /*Faz com que haja uma rolagem diferente, fazendo com que se movimente apenas a tabela, deixando o restante do conteúdo do site fixo, sendo um macete de responsividade para tabelas em telas pequenas.*/
+}
+
