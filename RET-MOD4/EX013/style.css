@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    border: 1px solid black;
+    width: 500px;
+    margin: auto;
+    border-radius: 5px;
+    padding: 5px;
+    background-image: linear-gradient(to bottom, rgb(228, 226, 226), rgb(158, 156, 156));
+}
+
+p {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 7px;
+    border-radius: 5px;
+    background-color: rgb(95, 95, 95);
+    color: white;
+    
+}
+
+input {
+    width: 200px;
+}
+
+#botao {
+    text-align: center;
+}
+
+#botao > input {
+    padding: 5px;
+    width: 100px;
+    font-size: 0.9em;
+    font-weight: bold;
+}

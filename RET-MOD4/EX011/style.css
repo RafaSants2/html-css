@@ -17,7 +17,7 @@ form {
     margin: auto;
     border: 1px solid black;
     border-radius: 5px;
-    background-image: linear-gradient(to bottom, lightgray, lightgray);
+    background-image: linear-gradient(to bottom, lightgray, rgb(138, 138, 138));
 }
 
 fieldset {
@@ -43,5 +43,15 @@ p {
     width: 130px;
 }
 
-input {
+#botao {
+    background-color: transparent;
+    border: 1px solid white;
+    text-align: center;
+    padding: 5px;
+}
+
+#limpar, #enviar {
+    padding: 7px;
+    font-size: 0.9em;
+    font-weight: bold;
 }
