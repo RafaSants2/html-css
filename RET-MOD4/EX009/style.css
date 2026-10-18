@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    border: 2px solid black;
+    width: 290px;
+    padding: 10px;
+    margin: auto;
+    background-image: linear-gradient(to top, rgb(161, 161, 161), lightgrey);
+}
+
+p {
+    padding: 5px;
+}
+
+p#botoes {
+    text-align: center;
+}
+
+input {
+    padding: 5px;
+}

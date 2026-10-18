@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Outros tipos de input</h1>
+    <form  method="post" autocomplete="off">
+        <p>
+            <label for="user">Usuário: </label>
+            <input type="text" id="user" required placeholder="nome do usuário">
+        </p>
+        <p>
+            <label for="senha">Senha: </label>
+            <input type="password" id="senha" required minlength="5" maxlength="10" placeholder="minimo de 8 caracteres">
+        </p>
+        <p>
+            <label for="num">Idade: </label>
+            <input type="number" id="num" required placeholder="sua idade">
+        </p>
+        <p>
+            <label for="gmail">Email: </label>
+            <input type="email" id="gmail" required placeholder="e-mail completo">
+        </p>
+        <p>
+            <input type="submit" value="Enviar" id="botao">
+            <input type="reset" value="Limpar" id="limpar">
+        </p>
+    </form>
+
+    <!--
+        TIPOS DE INPUT'S ATÉ O MOMENTO:
+            text -> texto
+            number -> número
+            password -> senha (dados sensíveis)
+            email -> E-mail(dados sensíveis)
+
+        ALGUNS TIPOS DE BOTÕES (INPUT'S):
+            subtmit -> que envia os dados
+            reset -> que limpa os dados nas caixas
+
+        ATRIBUTOS (NO INPUT):
+            required -> faz com que seja obrigado a escrever os dados em caixas específicas (caso contrário, seus dados não serão aceitos). 
+
+            minlength & maxlength -> usados para controlar a quantidade de caracteres escritos em uma caixa, por exemplo: uma senha com no mínimo 5 caracteres, tendo como um máximo de 8 caracteres
+
+            placeholder -> se usa para escrever algo dentro da caixa, que some após justamente algo ser escrito naquela caixa (input), funcionando como um tipo de aviso/dica.
+
+            autocomplete -> também pode ser posto em input's, sendo mais específico. POr exemplo: para um input do tipo "password", posso usar um autocomplete="new-password" ou autocomplete="current-password", isso facilita a busca do Google para te sugerir uma (nova) senha no seu gerenciador de senhas.
+    -->
+</body>
+</html>
