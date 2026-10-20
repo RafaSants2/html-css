@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Usando Output</h1>
+
+    <form autocomplete="off" method="post">
+        <p>
+            <label for="in1">Número 1: </label>
+            <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)" value="0">
+        </p>
+
+        <p>
+            <label for="in2">Número 2: </label>
+            <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)" value="0">
+        </p>
+
+        <p>
+            <label for="isoma">Soma: </label>
+            <output id="isoma">0</output>
+        </p>
+
+        <p id="botoes">
+            <input type="submit" value="Enviar" id="botao">
+            <input type="reset" value="Limpar" id="botao">
+        </p>
+    </form>
+
+    <!--
+    TIPOS DE INPUT'S ATÉ O MOMENTO:
+        TEXT -> texto
+        NUMBER -> número
+        PASSWORD -> senha (dados sensíveis)
+        EMAIL -> E-mail(dados sensíveis)
+        MONTH -> Mês (Pede somente o mês e o ano em que você nasceu).
+        DATE -> Data completa (diferente do "month" que só pede mês e ano, "date" pede   sua data completa de nascimento).
+        TIME -> tempo/horas (se usa para colocar um horário específico).
+        TEL -> para telefone. (ESTUDAR MAIS SOBRE "RegEx")
+        CHECKBOX -> para marcar uma ou mais de uma caixa/opção
+        RADIO -> diferente do CHECKBOX, o "RADIO" serve para marcar SOMENTE uma opção, sendo inválido mais de uma marcada (para não ter erros, coloque seus input's do tipo "radio" com o mesmo nome no atributo "NAME").
+        COLOR -> cria uma paleta que vc usa para escolher uma cor específica.
+        RANGE -> cria uma barra, que você pode configurar também com os atributos "step" e "min & max".
+        FILE -> usado para escolher arquivos
+
+    ALGUNS TIPOS DE BOTÕES (INPUT'S):
+        SUBMIT -> que envia os dados
+        RESET -> que limpa os dados nas caixas
+
+    ATRIBUTOS (NO INPUT):
+        REQUIRED -> faz com que seja obrigado a escrever os dados em caixas específicas (caso contrário, seus dados não serão aceitos). 
+
+        MINLENGTH & MAXLENGTH -> usados para controlar a quantidade de caracteres escritos em uma caixa, por exemplo: uma senha com no mínimo 5 caracteres, tendo como um máximo de 8 caracteres
+
+        MIN & MAX -> mesma lógica dos "MINLENGTH & MAXLENGTH", porém, min e max são usados para CAIXAS NUMÉRICAS.
+
+        STEP (em caixas numéricas) -> se usa para definir de passos em passos os números. por padrão, pula de 1 em 1, mas posso colocar para pular de 0.5 a 0.5
+
+        PLACEHOLDER -> se usa para escrever algo dentro da caixa, que some após justamente algo ser escrito naquela caixa (input), funcionando como um tipo de aviso/dica.
+
+        AUTOCOMPLETE -> também pode ser posto em input's, sendo mais específico. Por exemplo: para um input do tipo "password", posso usar um autocomplete="new-password" ou autocomplete="current-password", isso facilita a busca do Google para te sugerir uma (nova) senha no seu gerenciador de senhas.
+
+        CHECKED -> posso usá-lo no tipo CHECKBOX & RADIO para deixar uma opção automaticamente marcada.
+
+        LIST -> se usa para conectá-la com a tag "datalist"
+
+    OUTRAS TAG's DENTRO DE "FORM" ->
+        fieldset -> serve para agrupar grupos
+        legend -> dentro de fieldset, posso usá-lo como uma legenda para esse específico grupo.
+        autocomplete;
+        method
+        select -> cria uma caixa/grupo em forma de "lista"
+            optgroup -> cria um grupo dentro de um grupo, usando nele o atributo (e não a tag) "label"
+            option -> dentro da tag "select", ele servirá como as opções da minha lista.
+            selected (atributo na tag "select") -> para deixar como selecionado uma das opções.
+        datalist -> um pouco semelhante á tag "select". cria-se um grupo/lista onde se usa para opções a tag "option". Ademais, se usa junto com ele um input do tipo "text" para criar essa caixa com as opções, e para que estejam conectadas, deve-se usar o atributo "list" dentro do seu input, e o nome dentro desse atributo irá vir do id da tag "datalist".
+        textarea -> se usa para criar uma caixa de mensagem/ns
+            cols (atributo em textarea):se usa para definir quantidade de colunas do meu textarea.
+            rows (atributo em textarea): se usa para definir quantidade de linhas do meu textarea.
+        output
+-->
+</body>
+</html>

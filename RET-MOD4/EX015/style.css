@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin: 10px;
+    text-align: center;
+}
+
+form {
+    border: 1px solid black;
+    width: 300px;
+    padding: 15px;
+    margin: auto;
+    background-image: linear-gradient(to bottom, rgb(230, 229, 229), rgb(179, 177, 177));
+}
+
+p {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: rgb(75, 74, 74);
+    color: white;
+}
+
+#botoes {
+    text-align: center;
+}
+
+#botao {
+    padding: 5px;
+    width: 80px;
+    font-size: 0.8em;
+}
+
+output {
+    background-color: white;
+    color: black;
+    padding: 1px 10px;
+}
+
+input {
+    font-size: 1em;
+}
