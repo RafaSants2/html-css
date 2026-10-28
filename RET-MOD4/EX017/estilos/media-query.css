@@ -13,16 +13,27 @@ TV: acima de 1201px
 
 };
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (max-width: 767px) {
     body {
-        background-image: url(../imagens/back-tablet.jpg)
+        background-image: url(../imagens/back-phone.jpg);
     }
-};
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) { 
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+}
 
 @media screen and (min-width: 993px) and (max-width: 1200px) {
-
-};
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+}
 
 @media screen and (min-width: 1201px) {
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+} 
 
-}
