@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 950px) and (max-width: 1399px) {
+    header > menu > nav {
+        text-align: center;
+    }
+
+    main {
+        width: 90vw;
+    }
+}

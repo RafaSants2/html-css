@@ -34,6 +34,10 @@ TV: acima de 1201px
 };
 
 @media screen and (max-width: 767px) {
+    img#phone {
+        display: block;
+    }
+
     body {
         background-image: url(../imagens/back-phone.jpg);
     }
