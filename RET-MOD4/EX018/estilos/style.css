@@ -18,42 +18,67 @@ body {
 
 header {
     background-color: rgb(124, 123, 123);
-    padding: 10px 10px 10px 0px;
     margin-bottom: 10px;
 }
 
 header > h1 {
     text-align: center;
-    margin-bottom: 20px;
+    padding: 10px;
     
 }
 
+span.material-symbols-outlined {
+    background-color: rgb(36, 36, 36);
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
 
-header > menu > nav > a {
+span.material-symbols-outlined:hover {
+    color: black;
+    background-color: rgb(189, 188, 188);
+}
+
+
+menu {
+    display: none;
+}
+
+menu > ul {
+    list-style-type: none;
+}
+
+menu > ul > li > a {
     text-decoration: none;
     background-color: rgb(66, 66, 66);
     padding: 10px;
     color: white;
-    border-radius: 3px;
+    display: block;
+    text-align: center;
+    border: 1px solid rgb(124, 123, 123);
 }
 
-nav > a:hover {
+ul > li > a:hover {
     text-decoration: underline;
     color: rgb(0, 0, 155);
     background-color: rgb(141, 141, 141);
+    border: 1px solid rgb(66, 66, 66);;
 }
 
 main {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.212);
     border-radius: 10px;
-    width: 70vw;
+    width: 90vw;
     margin: auto;
     padding: 10px;
     background-color: white;
 }
 
 main  h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 main > div > p {

@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/style.css" media="all">
     <link rel="stylesheet" href="estilos/media.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"/>
     <title>Document</title>
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
-        <menu>
-            <nav>
-                <a href="#">Opção 1</a>
-                <a href="#">Opção 2</a>
-                <a href="#">Opção 3</a>
-                <a href="#">Opção 4</a>
-                <a href="#">Opção 5</a>
-            </nav>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">
+            menu
+        </span>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
         </menu>
     </header>
     <main>
@@ -30,5 +34,23 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod provident eos fugiat unde nulla accusamus, dolorum excepturi rerum doloremque deserunt repellat mollitia, perferendis voluptatum voluptas qui earum id similique a? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere error dolorum nostrum obcaecati repellat maxime totam molestias necessitatibus laboriosam, nesciunt beatae labore illo sed praesentium in, corrupti voluptates cupiditate ab? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolorem iusto impedit deserunt voluptatem ea hic corrupti quis reiciendis eveniet, perferendis neque obcaecati quas suscipit expedita dolorum delectus veritatis sunt?</p>
         </div>
     </main>
+
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+    </script>
 </body>
 </html>

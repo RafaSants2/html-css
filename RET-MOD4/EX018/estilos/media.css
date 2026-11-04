@@ -1,11 +1,22 @@
 @charset "UTF-8";
 
-@media screen and (min-width: 950px) and (max-width: 1399px) {
-    header > menu > nav {
+@media screen and (min-width: 768px){
+    span.material-symbols-outlined {
+        display: none;
+    }
+
+    menu {
+        display: block;
         text-align: center;
+        
+    }
+
+    menu > ul > li{
+        display: inline-block;
+        
     }
 
     main {
-        width: 90vw;
+        width: 60vw;
     }
 }
