@@ -36,10 +36,11 @@ section#login {
     transform: translate(-50%, -50%);
     background-color: white;
     width: 250px;
-    height: 500px;
+    height: 515px;
     border-radius: 20px;
     overflow: hidden; /*Tudo o que estiver fora de algo, será ocultado*/
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.384);
+    transition: width 0.3s, height 0.3s;
 }
 
 section#login > div#img {
@@ -53,6 +54,73 @@ section#login > div#img {
 section#login > div#form {
     padding: 10px;
     display: block;    
+}
+
+div#form > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#form > p {
+    font-size: 0.8em;
+}
+
+div.campo {
+    background-color: #5f2c82;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+div.campo span.material-symbols-outlined {
+    color: white;
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #49a09d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #346d6b;
+}
+
+form > input[type=submit]:hover {
+    background-color: #346d6b;
+    border: 1px solid #49a09d;
+}
+
+form > a.botao {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 5px;
+    text-decoration: none;
+    border: 1px solid #346d6b;
+    color: #0e312f;
+    padding-top: 5px;
+}
+
+form > a.botao:hover {
+    background-color: #346d6b;
+    text-decoration: underline;
+    border: 1px solid #49a09d;
+    color: #5bd1c9;
+}
+
+form > a.botao > span {
+    
+    font-size: 0.8em;
 }
 
 
