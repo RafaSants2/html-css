@@ -7,6 +7,7 @@
 
     section#login {
         width: 80vw;
+        height: 285px;
     }
 
     section#login > div#img {
@@ -20,6 +21,11 @@
         float: right; /*posiciona algo*/
         width: 70%;
     }
+
+    div#form > p {
+        text-align: justify;
+    }
+
     
 }
 
@@ -30,6 +36,7 @@
 
     section#login {
         width: 950px;
+        height: 350px;
     }
 
     section#login > div#img {
@@ -46,6 +53,8 @@
 
     div#form > p {
         font-size: 1.2em;
+        text-align: justify;
+        margin: 20px 0px;
     }
 
     div#form > h1{
