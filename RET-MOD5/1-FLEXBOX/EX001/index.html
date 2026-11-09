@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Primeiros passos Flexbox</h1>
+    
+    <div id="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>
+<!--
+    Antes de mais nada: Qual o formato da água? Quem é o pai?
+        Sempre que você pensar em Flexbox, lembre-se do formato da água, já que a água não possui um formato, ela vai se adaptar ao recipiente (jarro, garrafa, copo...), ou seja: vai depender do recipiente, isso é Flexbox. Mas se o seu pensamento for: "preciso criar um layout onde uma caixa precisa ter um tamanho específico onde ela não possa mudar", então ESQUEÇA o flexbox, porque ele não serve para solucionar esse tipo de problema, visto que o flexbox, como o próprio nome sugere, é uma caixa flexível.
+
+        "Vai depender do recipiente" -> mudemos essa frase para "Vai depender do CONTÊINER".
+
+        Flexible Box Module -> Trabalha com caixas, mas, como dito anteriomente, com flexbox não é possível definir o tamanho exato de uma caixa, o conteúdo e o contêiner que irão definir seu tamanho. Então, dentro dessa caixa flexível, podemos criar elementos/caixas dentro chamadas de itens. Se eu colocar no meu contêiner "display: flex;" e na parte de dentro "flex: auto;", só de fazer isso, haverá uma fluidez, seja aumentando ou diminuindo minha caixa.
+
+        Os contêiners, os blocos e os itens de um elemento flexível vão se adaptando de acordo com o pai, fazendo a gente voltar á pergunta anterior: Quem é o pai?
+
+        Quando você vai construir algo usando contêiners flexíveis, é necessário saber quem é o pai. O elemento pai é justamente aquele que chamamos de contêiner, ele é o pai (e o único) que vai levar a configuração "display: flex;", enquanto os itens irão receber configurações de itens msm
+
+    Aplicando no CSS ->
+    -   ELEMENTO PAI:
+            Display: flex; -> como dito anteriormente, é colocado somente no pai/contêiner.
+
+    -   ELEMENTO FILHO:
+            flex: auto; -> é a configuração PADRÃO ao usá-la nos itens, deixando-os fluidos, sendo a propriedade "strech", onde os itens vão ocupar todo o contêiner se espichando, seja aumentando ou diminuindo
+-->
