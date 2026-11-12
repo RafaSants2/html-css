@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Empacotamento e fluxo no Flexbox CSS</title>
+</head>
+<body>
+    <div id="container" class="c1">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <div id="container" class="c2">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <div id="container" class="c3">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <div id="container" class="c4">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <div id="container" class="c5">
+        <div class="itens">A</div>
+        <div class="itens">B</div>
+        <div class="itens">C</div>
+        <div class="itens">A</div>
+        <div class="itens">B</div>
+        <div class="itens">C</div>
+        <div class="itens">A</div>
+        <div class="itens">B</div>
+        <div class="itens">C</div>
+    </div>
+</body>
+</html>
+
+<!--
+    flex-wrap - O que é?
+        - flex-wrap: nowrap; (PADRÃO) -> Wrap significa "empacotamento". Essa propriedade mexe com o comportamento do contêiner pai. Por padrão, o flex-wrap está como "flex-wrap: nowrap;", então por padrão ele não vai estar empacotado, caso eu diminua a largura do meu conteiner mais do que o esperado, haverá um encolhimento, algo que vimos PARECIDO no começo usando "flex: auto, porém, lembr-se que o tamanho do bloco irá depender do CONTEÚDO que existe dentro dele (container)"
+
+        - flex-wrap: wrap; -> se com "flex-wrap: nowrap;" (padrão) o conteúdo não quebra (mas sim encolhe) com o wrap já é diferente, caso eu reduza o container mais do que o normal, no lugar do conteúdo encolher, haverá uma quebra de linha no sentido do cross-axis, o eixo-transversal (considerando um flex-direction: row;), com isso, o item vai para baixo á esquerda, visto que meu main-axis tem como main-start a esquerda e o meu ponto final á direita.
+
+        - flex-wrap: wrap-reverse; -> assim como "wrap", quando o conteúdp reduzir mais do que o normal, haverá uma quebra de conteúdo, porém, tendo como cross-axis o sentido OPOSTO, fazendo o conteúdo quebrado ir pra cima, mas ainda com o eixo-principal da esquerda á direita, sem nenhum efeito.
+
+        RESUMO:
+        flex-wrap: nowrap; o conteúdo dentro container-pai vai encolher até o máximo que puder.
+
+        flex-wrap: wrap; o conteúdo quebra seguindo a direção cross-exis (eixo transversal) de cima pra baixo.
+
+        flex-wrap: wrap-reverse; é a mesma lógica do wrap, porém seguindo a direção contrária do cross-exis (eixo transversal), sendo de baixo pra cima.
+
+        - OBS: LEMBRE-SE QUE VAI DEPENDER TBM DA CONFIGURAÇÃO QUE USAMOS NO FLEX-DIRECTION.
+        - FORMA SIMPLIFICADA DE FLEX-DIRECTION + FLEX-WRAP: FLEX-FLOW
+
+        FLEX-WRAP: WRAP; + FLEX: AUTO; -> como visto antes, o flex: auto: (usado nos itens, e não no container-pai) faz com que todo o espaço sobrado dentro do container seja preenchido por seus conteúdos sem haver quebra de linha/conteúdo, levando em conta sabendo a configuração padrão do "flex-wrap: nowrap" vai estar junta, entretanto, se eu troco por "flex-wrap: wrap", HAVERÁ uma quebra de linha regular quando o limite do seu conteúdo acabar.
+
+    Aplicando no CSS ->
+       ELEMENTO PAI:
+            - Display: flex; -> como dito anteriormente, é colocado somente no pai/contêiner.
+            - flex-direction -> usado para definir a forma como seus itens serão colocados (row, column, row-reverse, column-reverse...).
+            - flex-wrap -> mexe com o comportamento do container pai, tendo as configurações:
+            nowrap (PADRÃO), wrap & wrap reverse.
+            - flex-flow -> forma simplificada de escrever flex-direction + flex-wrap.
+
+       ELEMENTO FILHO:
+            - flex: auto; -> é a configuração PADRÃO ao usá-la nos itens deixando-os fluidos e preenchendo todo o espaço do container usando os conteúdos.
+
+-->

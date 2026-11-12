@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Direções e Eixos Flexbox CSS</h1>
+
+    <div id="container-pai" class="row">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>       
+    </div>
+
+    <div id="container-pai" class="row-r">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+    </div>
+
+    <div id="container-pai" class="col">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+    </div>
+
+    <div id="container-pai" class="col-r">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+    </div>
+
+</body>
+<!--
+    Direções e Eixos Flexbox CSS:
+        - Na última aula foi dito sobre o flex-container (o pai), e sobre os elementos itens (o flex-container que os contem), além disso, o pai é quem leva o display: flex;, então por agora veremos somente propriedades postas no container-pai, e não nos itens.
+
+        - flex-direction -> há 4 configurações permitidas nessa propriedade, sendo elas:
+            row (padrão)
+            row-reverse
+            column
+            column-reverse
+
+        - Com "row", os itens dentro do container-pai aparecem da esquerda á direita (horizontalmente falando), com "row-reverse" seu ponto inicial passa a ser da esquerda e tendo como ponto final á direita.
+
+        - Com "column", os itens dentro do container-pai passam a aparecer de cima para baixo (verticalmente falando), enquanto com "column-reverse" os itens aparecem de baixo pra cima.
+
+        - Com isso, quando escolhemos uma direção, são criados dois eixos(axis).
+        Se é flex-direction: row; será deitado da esquerda á direita, automáticamente o primeiro eixo a ser criado é o EIXO-PRINCIPAL/MAIN-AXIS. o main-axis gera dois pontos, sendo o ponto inicial (MAIN-START) e o ponto final (MAIN-END), sendo postos os itens então da esquerda (main-start) á direita (main-end). O segundo eixo a ser criado é o EIXO-TRANSVERSAL(CROSS-AXIS), também gerando dois pontos: um inicial (cross-start) e um final (cross-end), sendo assim então de cima para baixo, mas isso só ocorre assim quando usamos o flex-direction: row;, se for com as demais, os eixos também mudarão.
+
+        RESUMO DOS EIXOS PARA CADA CONFIGURAÇÃO NO FLEX-DIRECTION:
+            - flex-direction: row;
+                MAIN-AXIS: da esquerda á direita - horizontalmente
+                CROSS-AXIS: de cima pra baixo - verticalmente
+
+            - flex-direction: row-reverse;
+                MAIN-AXIS: da direita á esquerda - horizontalmente 
+                CROSS-AXIS: de cima pra baixo - verticalmente (e NÃO POSSUI INVERSÃO, segue a mesma coisa)
+
+            - flex-direction: column;
+                MAIN-AXIS: de cima pra baixo - verticalmente (e sim, mudou por ser de coluna) 
+                CROSS-AXIS: da esquerda á direita - horizontalmente 
+
+            - flex-direction: column-reverse;
+                MAIN-AXIS: de baixo pra cima - verticalmente (e sim, mudou por ser de coluna) 
+                CROSS-AXIS: da esquerda á direita - horizontalmente 
+
+            !OBS: os itens são colocados SEMPRE no sentido do MAIN-AXIS
+
+    Aplicando no CSS ->
+       ELEMENTO PAI:
+            - Display: flex; -> como dito anteriormente, é colocado somente no pai/contêiner.
+            - flex-direction -> usado para definir a forma como seus itens serão colocados (row, column, row-reverse, column-reverse...).
+
+       ELEMENTO FILHO:
+            - flex: auto; -> é a configuração PADRÃO ao usá-la nos itens deixando-os fluidos, sendo a propriedade "strech", onde os itens vão ocupar todo o contêiner se espichando, seja aumentando ou diminuindo
+
+-->
+</html>
