@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento nos eixos Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container" class="cont-1">
+        <div id="item">A</div>
+        <div id="item">A</div>
+        <div id="item">A</div>
+        <div id="item">A</div>
+    </div>
+
+    <div id="container" class="cont-2">
+        <div id="item">A</div>
+        <div id="item">A</div>
+        <div id="item">A</div>
+        <div id="item">A</div>
+    </div>
+    <div id="container" class="cont-3">
+        <div id="item">A</div>
+        <div id="item">A</div>
+        <div id="item">A</div>
+        <div id="item">A</div>
+    </div>
+    <div id="container" class="cont-4">
+        <div id="item">A</div>
+        <div id="item">A</div>
+        <div id="item">A</div>
+        <div id="item">A</div>
+    </div>
+    <div id="container" class="cont-5">
+        <div id="item">A</div>
+        <div id="item">A</div>
+        <div id="item">A</div>
+        <div id="item">A</div>
+    </div>
+    <div id="container" class="cont-6">
+        <div id="item">A</div>
+        <div id="item">A</div>
+        <div id="item">A</div>
+        <div id="item">A</div>
+    </div>
+
+<!--
+    *Usaremos como exemplo um container com itens com a configuração "flex-flow: row nowrap;"*
+
+    Na última aula vimos que, quando temos um "flex-flow: row nowrap;", temos um main-axis e um cross-axis, mas o que será aprendido hoje é como alinhar os itens nesses dois eixos.
+
+    - Justify-content ->
+        Ele fará o alinhamento em relação ao MAIN-AXIS, e sabemos que ele possui o main-start e o main-end, sendo da esquerda á direita (sendo com "row").
+
+        | Valores do justify-content: 
+            flex-start -> esse flex-start está relacionado ao "main-start". Faz com que os itens fiquem grudados exatamente no main-start, e caso exista um espaço livre, ele sempre estará no final, no main-end (LEMBRANDO QUE O MAIN-AXIS VAI DEPENDER  SE VOCÊ ESTIVER USANDO ROW, ROW-REVERSE, ETC...).
+
+            flex-end -> mesma lógica com o flex-start, porém agora fazendo com que os itens fiquem grudados no main-end, deixando o espaço (se houver) no main-start.
+
+            center -> deixa os itens centralizados, entre o main-start e o main-end.
+
+            space-between -> coloca o primeiro item no main-start e o último item no main-end, os demais itens estarão centralizados com um espaçamento igual.
+
+            space-evenly -> diferente do between, o evenly não gruda o primeiro e o último item nas extremidades do container, ele faz com que tenhamos antes e depois dos itens um espaçamento igual.
+
+            space-around -> ele divide espaços baseados na quantidade de itens que tenho, deixando-os centralizados dentro desses espaços, é como seos itens tivessem dentro de um background-color invisivel 
+
+    - Align-items ->
+
+
+
+    Aplicando no CSS ->
+       ELEMENTO PAI:
+            - Display: flex; -> como dito anteriormente, é colocado somente no pai/contêiner.
+            - flex-direction -> usado para definir a forma como seus itens serão colocados (row, column, row-reverse, column-reverse...).
+            - flex-wrap -> mexe com o comportamento do container pai, tendo as configurações:
+            nowrap (PADRÃO), wrap & wrap reverse.
+            - flex-flow -> forma simplificada de escrever flex-direction + flex-wrap.
+            justify-content: mexe com o alinhamento do container em relação ao MAIN-AXIS
+
+       ELEMENTO FILHO:
+            - flex: auto; -> é a configuração PADRÃO ao usá-la nos itens deixando-os fluidos e preenchendo todo o espaço do container usando os conteúdos.    
+
+-->
+</body>
+</html>
