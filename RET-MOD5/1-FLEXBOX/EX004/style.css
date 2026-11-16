@@ -54,3 +54,28 @@ div#container {
 .cont-6 {
     justify-content: space-around;
 }
+
+.cont-7, .cont-8, .cont-9, .cont-10, .cont-11, .cont-12 {
+    height: 100px;
+}
+
+.cont-7 {
+    align-items: stretch;
+}
+
+.cont-8 {
+    align-items: flex-start;
+}
+
+.cont-9 {
+    align-items: flex-end;
+}
+
+.cont-10 {
+    align-items: center;
+}
+
+.cont-11 {
+    align-items: center;
+    justify-content: center;
+}
