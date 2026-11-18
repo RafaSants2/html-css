@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento de itens empacotados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Alinhamento de itens empacotados</h1>
+
+    <main>
+        <section id="num1">
+            <div id="pai" class="pai1">
+                <div id="itens">1</div>
+                <div id="itens">2</div>
+                <div id="itens">3</div>
+                <div id="itens">4</div>
+                <div id="itens">5</div>
+                <div id="itens">6</div>
+                <div id="itens">7</div>
+                <div id="itens">8</div>
+            </div>
+            <div id="pai" class="pai2">
+                <div id="itens">1</div>
+                <div id="itens">2</div>
+                <div id="itens">3</div>
+                <div id="itens">4</div>
+                <div id="itens">5</div>
+                <div id="itens">6</div>
+                <div id="itens">7</div>
+                <div id="itens">8</div>
+            </div>
+            <div id="pai" class="pai3">
+                <div id="itens">1</div>
+                <div id="itens">2</div>
+                <div id="itens">3</div>
+                <div id="itens">4</div>
+                <div id="itens">5</div>
+                <div id="itens">6</div>
+                <div id="itens">7</div>
+                <div id="itens">8</div>
+            </div>
+            <div id="pai" class="pai4">
+                <div id="itens">1</div>
+                <div id="itens">2</div>
+                <div id="itens">3</div>
+                <div id="itens">4</div>
+                <div id="itens">5</div>
+                <div id="itens">6</div>
+                <div id="itens">7</div>
+                <div id="itens">8</div>
+            </div>
+            <div id="pai" class="pai5">
+                <div id="itens">1</div>
+                <div id="itens">2</div>
+                <div id="itens">3</div>
+                <div id="itens">4</div>
+                <div id="itens">5</div>
+                <div id="itens">6</div>
+                <div id="itens">7</div>
+                <div id="itens">8</div>
+            </div>
+            <div id="pai" class="pai6">
+                <div id="itens">1</div>
+                <div id="itens">2</div>
+                <div id="itens">3</div>
+                <div id="itens">4</div>
+                <div id="itens">5</div>
+                <div id="itens">6</div>
+                <div id="itens">7</div>
+                <div id="itens">8</div>
+            </div>
+            <div id="pai" class="pai7">
+                <div id="itens">1</div>
+                <div id="itens">2</div>
+                <div id="itens">3</div>
+                <div id="itens">4</div>
+                <div id="itens">5</div>
+                <div id="itens">6</div>
+                <div id="itens">7</div>
+                <div id="itens">8</div>
+            </div>
+            
+        </section>
+
+        <section id="num2">
+            <div id="pai" class="paiAlign1">
+                <div id="itens">1</div>
+                <div id="itens">2</div>
+                <div id="itens">3</div>
+                <div id="itens">4</div>
+                <div id="itens">5</div>
+                <div id="itens">6</div>
+                <div id="itens">7</div>
+                <div id="itens">8</div>
+            </div>
+            <div id="pai" class="paiAlign2">
+                <div id="itens">1</div>
+                <div id="itens">2</div>
+                <div id="itens">3</div>
+                <div id="itens">4</div>
+                <div id="itens">5</div>
+                <div id="itens">6</div>
+                <div id="itens">7</div>
+                <div id="itens">8</div>
+            </div>
+            <div id="pai" class="paiAlign3">
+                <div id="itens">1</div>
+                <div id="itens">2</div>
+                <div id="itens">3</div>
+                <div id="itens">4</div>
+                <div id="itens">5</div>
+                <div id="itens">6</div>
+                <div id="itens">7</div>
+                <div id="itens">8</div>
+            </div>
+            <div id="pai" class="paiAlign4">
+                <div id="itens">1</div>
+                <div id="itens">2</div>
+                <div id="itens">3</div>
+                <div id="itens">4</div>
+                <div id="itens">5</div>
+                <div id="itens">6</div>
+                <div id="itens">7</div>
+                <div id="itens">8</div>
+            </div>
+        </section>
+    </main>
+
+
+<!-- 
+    Sabemos que, se usamos a propriedade flex-wrap com "wrap/nowrap", haverá uma quebra de elemento que dependerá do seu cross-axis, se é com "wrap", seu cross-star começa de cima e termina pra baixo, sendo então o cross-end, com wrap reverse é o contrário, começando de baixo pra cima (mas também pode ser da esquerda á direita ou direita á esquerda dependendo do que eu usar no flex-direction). 
+
+    justify-content: alinha os elementos dentro do eixo MAIN-AXIS
+    align-items: alinha os elementos dentro do eixo CROSS-AXIS
+    ! align-content: alinha os elementos no eixo CROSS-AXIS, MAS só quando estão empacotados, ou seja, alinha as LINHAS dos itens.
+
+    align-content:
+        - stretch (padrão) -> baseando-se nas linhas que se quebrarem por pouco espaço, os conteúdos, serão esticados, ou seja pega toda a área disponível e vai dividir pelo número de linhas (ou colunas). Por exemplo: se eu diminuir o meu container mais do que o esperado, haverá uma quebra de linha, deixando o meu último elemento na parte de baixo, enquanto os demais na parte de cima (isso com wrap), criando-se 2 áreas/linhas
+
+        - flex-start -> pega TODOS os elementos (inclusive a quebra) e gruda no cross-start reservando o espaço de baixo no cross-end em branco
+
+        - flex-end -> mesma lógica porém grudando todos os itens e a quebra no cross-end
+
+        - center -> cria um espaço no cross-start e no cross-end, deixando os elementos no centro do meu cross-axis
+
+        - space-between -> pega os primeiros elementos e coloca no cross-start e os últimos elementos no cross-end e caso tenham muitos itens, serão colocados no centro.
+
+        - space-evenly -> 
+
+    Aplicando no CSS ->
+       ELEMENTO PAI:
+            - Display: flex; -> como dito anteriormente, é colocado somente no pai/contêiner.
+            - flex-direction -> usado para definir a forma como seus itens serão colocados (row, column, row-reverse, column-reverse...).
+            - flex-wrap -> mexe com o comportamento do container pai, tendo as configurações:
+            nowrap (PADRÃO), wrap & wrap reverse.
+            - flex-flow -> forma simplificada de escrever flex-direction + flex-wrap.
+            - justify-content: mexe com o alinhamento do container em relação ao MAIN-AXIS
+            - Align-items:  mexe com o alinhamento do container em relação ao CROSS-AXIS
+
+       ELEMENTO FILHO:
+            - flex: auto; -> é a configuração PADRÃO ao usá-la nos itens deixando-os fluidos e preenchendo todo o espaço do container usando os conteúdos.    
+-->
+</body>
+</html>

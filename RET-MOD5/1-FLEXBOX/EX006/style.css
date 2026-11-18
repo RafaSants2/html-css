@@ -1,0 +1,70 @@
+@charset "UTF-8"; 
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-evenly;
+    padding: 5px;
+    background-color: rgb(238, 236, 236);
+}
+
+div#pai {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: rgb(189, 188, 188);
+    
+    height: 200px;
+    
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+div.pai2 {
+    align-content: start;
+}
+
+div.pai3 {
+    align-content: end;
+}
+
+div.pai4 {
+    align-content: center;
+}
+
+div.pai5 {
+    align-content: space-around;
+    
+}
+
+div.pai6 {
+    align-content: space-between;
+}
+
+div.pai7 {
+    align-content: space-evenly;
+}
+
+div#itens {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+div.paiAlign1 {
+    align-items: stretch;
+}
+div.paiAlign2 {
+    align-items: start;
+}
+div.paiAlign3 {
+    align-items: end;
+}
+div.paiAlign4 {
+    align-items: center;
+}
