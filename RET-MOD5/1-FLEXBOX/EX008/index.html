@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-basis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="pai">
+        <div id="itens">A</div>
+        <div id="itens">conteúdo</div>
+        <div id="itens">Conteúdo um pouco maior</div>
+        <div id="itens">D</div>
+        <div id="itens">conteúdo que estará ainda maior</div>
+    </div>
+
+<!--
+    flex-basis (itens):
+        - por padrão, usaremos como exemplo no container-pai o flex-flow: row nowrap;
+
+        - Por padrão, o flex-basis vem com "auto", isso significa que o tamanho do seu elemento (que no nosso exemplo é no eixo-principal, sendo a largura, porque se fosse em coluna seria a altura), é ditado através do tamanho do seu conteúdo. 
+            ! Exemplo: tenho três itens dentro do meu container-pai, o primeiro e o segundo possuem uma letra cada, mas no terceiro elemento possui uma frase, logicamente falando, o meu terceiro item terá uma largura maior, justamente pelo meu conteúdo ser grande.
+
+        - Sabemos que, se tentarmos diminuir o nosso container-pai com nowrap, os meus elementos vão diminuir usando o espaço disponível que eles possuem (que serão definifidos baseado em seus conteúdos que cada elemento possuiria), e mesmo que eu aumente meu container muito, os itens não vão espichar.
+
+        - Usando pixeis (px):
+            com flex-basis, no lugar de "auto", posso usar os "px"; se eu colocar flex-basis: 200px;, todos os meus itens terão 200px, porém, usando um valor fixo, eles não se adaptarão ao conteúdo dentro de cada item/elemento. Caso eu diminua o container-pai mais do que o que se pede, ai os itens vão diminuir, tendo uma quebra nos conteúdos dentro dos elementos. Por isso, quando queremos definir a altura ou largura, usamos flex-basis nesse caso. porém, se ele diminuir ainda mais, obviamente os elementos vão quebrar irregularmente, principalmente por usarmos nesse exemplo o "nowrap".
+
+        OU SEJA:
+        flex-basis ->
+            auto;
+            medidor com "px".
+
+    Aplicando no CSS ->
+       ELEMENTO PAI:
+            - Display: flex; -> como dito anteriormente, é colocado somente no pai/contêiner.
+            - flex-direction -> usado para definir a forma como seus itens serão colocados (row, column, row-reverse, column-reverse...).
+            - flex-wrap -> mexe com o comportamento do container pai, tendo as configurações:
+            nowrap (PADRÃO), wrap & wrap reverse.
+            - flex-flow -> forma simplificada de escrever flex-direction + flex-wrap.
+            - justify-content: mexe com o alinhamento do container em relação ao MAIN-AXIS
+            - Align-items:  mexe com o alinhamento do container em relação ao CROSS-AXIS
+            - Align-content: mexe com o alinhamento dos elementos EMPACOTADOS do container no CROSS-AXIS (se usa com "wrap"/"wrap-reverse")
+
+       ELEMENTO FILHO:
+            - flex: auto; -> é a configuração PADRÃO ao usá-la nos itens deixando-os fluidos e preenchendo todo o espaço do container usando os conteúdos.       
+            - order: com ele posso mudar a ordem de um item de forma crescente (do menor ao maior). 
+            - align-self: propriedade que se aplica a cada um dos itens no sentido do eixo-transversal/cross-axis.  
+            - flex-basis: se usa para definir o tamanho de um elemento, seja com auto (padrão) ou usando pixeis (px).
+-->
+</body>
+</html>
