@@ -7,9 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="pai">
+        <div class="itens" id="i1">3</div>
+        <div class="itens" id="i2">2</div>
+        <div class="itens" id="i3">20</div>
+        <div class="itens" id="i4">24</div>
+        <div class="itens" id="i5">- 10</div>
+    </div>
 
 <!--
+    * Agora falaremos sobre propriedades nos itens (dentro do container-pai).
+
+    Anatomia dos itens Flexbox: 
+        Antes de mais nada, deve-se entender que: o container com flex-box é flexível, porém, os itens POR PADRÃO NÃO são flexíveis.
+
+        - Order: todo item em flexbox por padrão possui um order: 0;, agora, se você quiser modificar a ordem de algum dos elementos dentro do container-pai, ai você pode aplicar a propriedade Order com valores diferentes. A ordem é feita de forma crescente, sendo do menor até o maior, por exemplo: 
+            ANTES -> 0 5 3 -2
+            DEPOIS -> -2 0 3 5
+
+        - align-self: é uma propriedade que se aplica a cada um dos itens dentro do meu container pai, além de que ele funciona diretamente no CROSS-AXIS. O align-self possui 5 valores, sendo eles:
+
+            - auto -> ele herda a característica  de alinhamento vertical do seu pai (seja ele o "align-content" ou o "align-items").
+            - flex-start -> deixa o item no cross-start.
+            - flex-end -> deixa o item no cross-end.
+            - center -> deixa o item centralizado entre o cross-start e cross-end
+            - stretch -. ele espicha o item.
+
+            ! Lembre-se que: o align-self se usa em CADA um dos itens o cross-axis, se usássemos no container-pai o align-content ou align-items, o valor posto afetaria TODOS os itens.
+
     Aplicando no CSS ->
        ELEMENTO PAI:
             - Display: flex; -> como dito anteriormente, é colocado somente no pai/contêiner.
@@ -22,7 +47,8 @@
             - Align-content: mexe com o alinhamento dos elementos EMPACOTADOS do container no CROSS-AXIS (se usa com "wrap"/"wrap-reverse")
 
        ELEMENTO FILHO:
-            - flex: auto; -> é a configuração PADRÃO ao usá-la nos itens deixando-os fluidos e preenchendo todo o espaço do container usando os conteúdos.        
+            - flex: auto; -> é a configuração PADRÃO ao usá-la nos itens deixando-os fluidos e preenchendo todo o espaço do container usando os conteúdos.       
+            - order: com ele posso mudar a ordem de um item de forma crescente (do menor ao maior). 
 -->
 </body>
 </html>
