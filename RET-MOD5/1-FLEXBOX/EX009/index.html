@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle do tamanho de itens flexíveis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="pai">
+        <div id="item">A</div>
+        <div id="item">B</div>
+        <div id="item" class="esticar">C</div>
+        <div id="item" class="diminuir">D</div>
+        <div id="item">F</div>
+    </div>
+
+<!--
+    Controle do tamanho de itens flexíveis:
+        Flex-grow -> o quanto um item pode crescer
+        shrink -> o quanto um item pode encolher
+
+        | Como exemplo, imaginemos que temos um "flex-flow: row nowrap;" com um tamamho de 550px, e dentro desse container-pai haverão 3 elementos, tendo cada elemento um flex-basis: 150px (ocupando 450px de 550px).
+
+        - Pode encolher? Pode aumentar?
+        flex-shrink: 1 (PADRÃO)
+        flex-grow: 0 (PADRÃO)
+
+        | Exemplos diferentes (com flex-grow):
+            - Imaginemos que tenhamos 3 elementos em um container-pai, porém, o primeiro e o último possuem um flex-grow: 0, enquanto o do meio um flex-grow: 1. Caso eu estique meu container, somente o elemento do meio vai aumentar, enquanto o primeiro e o último seguirão do mesmo tamanho.
+
+            - Agora, vamos imaginar que o primeiro elemento possui um flex-grow: 0, o segundo um flex-grow: 1 e o terceiro um flex-grow: 2. Nesse caso, o primeiro não irá esticar, enquanto o elemento do meio e o último, sim. Entretando, pelo terceiro elemento possuir um flex-grow: 2, ele vai AUMENTAR O DOBRO DO TAMANHO, mas dobro do tamanho do que / de quem? o dobro do tamanho do elemento do meio, que possui flex-grow: 1, então sim, um flex-grow com um número maior vai ser aumentado ainda mais baseando-se em outro elemento que pode também aumentar, porém com um valor inferior.
+                - De forma mais simplificada: o do meio crescerá 150px, então o último (com flex-grow: 2), vai crescer o dobro de 'px' do elemento do meio, crescendo então 300px. OBS: caso os dois últimos elementos tenham o mesmo valor (flex-grow: 2), ambos cresceram de forma proporcional, nesse caso não existiria uam referência, ainda aumentariam muito mais do que se fosse ambos com 1, porém de forma proporcional.
+
+        | Exemplos diferentes (com flex-shrink):
+            - Imaginemos que tenhamos 3 elementos em um container-pai, porém, o primeiro e o último possuem um flex-shrink: 0, enquanto o do meio um flex-shrink: 1. Caso eu diminua o meu container, somente o elemento do meio vai diminuir, enquanto o primeiro e o último seguirão do mesmo tamanho.
+
+            - E se meu primeiro elemento ter um flex-shrink: 2, o do meio um flex-shrink: 0 e o último um flex-shrink: 1? Nesse caso, o do meio não irá diminuir, já o primeiro e último sim, mas, com a mesma lógica usando flex-grow, o elemento que possui flex-shrink: 2 diminuirá o dobro que o elemento que possui flex-shrink: 1 diminui
+
+        | Baseando-se em seus padrões e nas duas perguntas:
+            Pode encolher - flex-shrink: 1 -> Sim! (por padrão) o item pode encolher, mas se você colocar 0, significa que não, não pode encolher!
+
+            Pode aumentar - flex-grow: 0 -> Não! (por padrão) o item não pode aumentar, mas se você colocar 1, ai sim ele poderá aumentar!
+
+            Sabendo que usamos "nowrap" e por padrão o flex-shrink é "1", se eu diminuir o meu container-pai mais do que o necessário, os itens encolherão também. Mas fazendo o contrário, se eu aumentar o meu container mais do que o necessário (ou seja, deixando de ter um espaço minímo), os elementos seguirão com o mesmo tamanho, visto que o flex-grow está como 0, o que impede dos elementos aumentarem junto com o container.
+            
+
+
+
+
+        OBS: o ideal é usar essas propriedades com o flex-wrap no "nowrap".
+
+    Aplicando no CSS ->
+       ELEMENTO PAI:
+            - Display: flex; -> como dito anteriormente, é colocado somente no pai/contêiner.
+            - flex-direction -> usado para definir a forma como seus itens serão colocados (row, column, row-reverse, column-reverse...).
+            - flex-wrap -> mexe com o comportamento do container pai, tendo as configurações:
+            nowrap (PADRÃO), wrap & wrap reverse.
+            - flex-flow -> forma simplificada de escrever flex-direction + flex-wrap.
+            - justify-content: mexe com o alinhamento do container em relação ao MAIN-AXIS
+            - Align-items:  mexe com o alinhamento do container em relação ao CROSS-AXIS
+            - Align-content: mexe com o alinhamento dos elementos EMPACOTADOS do container no CROSS-AXIS (se usa com "wrap"/"wrap-reverse")
+
+       ELEMENTO FILHO:
+            - flex: auto; -> é a configuração PADRÃO ao usá-la nos itens deixando-os fluidos e preenchendo todo o espaço do container usando os conteúdos.       
+            - order: com ele posso mudar a ordem de um item de forma crescente (do menor ao maior). 
+            - align-self: propriedade que se aplica a cada um dos itens no sentido do eixo-transversal/cross-axis.  
+            - flex-basis: se usa para definir o tamanho de um elemento, seja com auto (padrão) ou usando pixeis (px).    
+-->
+</body>
+</html>
