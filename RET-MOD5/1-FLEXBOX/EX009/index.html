@@ -37,6 +37,25 @@
 
             - E se meu primeiro elemento ter um flex-shrink: 2, o do meio um flex-shrink: 0 e o último um flex-shrink: 1? Nesse caso, o do meio não irá diminuir, já o primeiro e último sim, mas, com a mesma lógica usando flex-grow, o elemento que possui flex-shrink: 2 diminuirá o dobro que o elemento que possui flex-shrink: 1 diminui
 
+        | Exemplos com: flex-basis + flex-grow + flex-shrink:
+            - Imaginemos 3 elementos dentro de um container, tendo cada um deles uma configuração diferente:
+
+            Primeiro elemento:
+                flex-basis: 150px
+                flex-grow: 0
+                flex-shrink: 1
+
+            Segundo elemento:
+                flex-basis: 150px
+                flex-grow: 2
+                flex-shrink: 0
+
+            Terceiro elemento:
+                flex-basis: 150px
+                flex-grow: 1
+                flex-shrink: 2
+
+        
         | Baseando-se em seus padrões e nas duas perguntas:
             Pode encolher - flex-shrink: 1 -> Sim! (por padrão) o item pode encolher, mas se você colocar 0, significa que não, não pode encolher!
 
@@ -44,8 +63,6 @@
 
             Sabendo que usamos "nowrap" e por padrão o flex-shrink é "1", se eu diminuir o meu container-pai mais do que o necessário, os itens encolherão também. Mas fazendo o contrário, se eu aumentar o meu container mais do que o necessário (ou seja, deixando de ter um espaço minímo), os elementos seguirão com o mesmo tamanho, visto que o flex-grow está como 0, o que impede dos elementos aumentarem junto com o container.
             
-
-
 
 
         OBS: o ideal é usar essas propriedades com o flex-wrap no "nowrap".
