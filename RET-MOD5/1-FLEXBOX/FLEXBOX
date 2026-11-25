@@ -1,0 +1,22 @@
+Aplicando no CSS ->
+       ELEMENTO PAI:
+            - Display: flex; -> como dito anteriormente, é colocado somente no pai/contêiner.
+            - flex-direction -> usado para definir a forma como seus itens serão colocados (row, column, row-reverse, column-reverse...).
+            - flex-wrap -> mexe com o comportamento do container pai, tendo as configurações:
+            nowrap (PADRÃO), wrap & wrap reverse.
+            + flex-flow -> forma simplificada de escrever flex-direction + flex-wrap.
+            - justify-content: mexe com o alinhamento do container em relação ao MAIN-AXIS
+            - Align-items:  mexe com o alinhamento do container em relação ao CROSS-AXIS
+            - Align-content: mexe com o alinhamento dos elementos EMPACOTADOS do container no CROSS-AXIS (se usa com "wrap"/"wrap-reverse")
+
+       ELEMENTO FILHO:       
+            - order: com ele posso mudar a ordem de um item de forma crescente (do menor ao maior). 
+            - align-self: propriedade que se aplica a cada um dos itens no sentido do eixo-transversal/cross-axis.  
+            - flex-basis: se usa para definir o tamanho de um elemento, seja com auto (padrão) ou usando pixeis (px).    
+            - flex-grow: se usa para definir o quanto um item pode crescer.
+            - flex-shrink: se usa para definir o quanto um item pode diminuir.
+            + flex: forma simplificada de flex-grow + flex-shrink + flex-grow, tendo também:
+                flex: auto flex-grow (1) + flex-shrink (1) + flex-basis (auto)
+                flex: none flex-grow (0) + flex-shrink (0) + flex-basis (auto)
+                flex: initial
+                flex-grow (0) + flex-shrink (1) + flex-basis (auto)

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propiedade flex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="pai">
+        <div id="item" class="maior">A</div>
+        <div id="item">B</div>
+        <div id="item" class="muito-maior">C</div>
+        <div id="item">D</div>
+        <div id="item" class="menor">E</div>
+    </div>
+
+<!--
+    Propriedade flex (simplificação):
+        - A propriedade flex é nada mais que uma forma simplificada de se usar o flex-grow + flex-shrink + flex-grow
+
+        Antes:
+            flex-grow: 0
+            flex-shrink: 1
+            flex-basis: 150px
+
+        Depois:
+            flex: 0 1 150px
+
+        flex: initial ->
+            usando essa configuração, é o mesmo que colocar separadamente a forma padrão do flex-grow (0) + flex-shrink (1) + flex-basis (auto)
+
+        flex: none ->
+            em resumo, é o mesmo que fazer flex-grow (0) + flex-shrink (0) + flex-basis (auto), ou seja, fazer um item NÃO flexivel.
+
+        flex: auto ->
+            ele é o contrário do flex:none, sendo flex-grow (1) + flex-shrink (1) + flex-basis (auto), fazendo com que seja realmente um item flexivel.
+
+    Aplicando no CSS ->
+       ELEMENTO PAI:
+            - Display: flex; -> como dito anteriormente, é colocado somente no pai/contêiner.
+            - flex-direction -> usado para definir a forma como seus itens serão colocados (row, column, row-reverse, column-reverse...).
+            - flex-wrap -> mexe com o comportamento do container pai, tendo as configurações:
+            nowrap (PADRÃO), wrap & wrap reverse.
+            + flex-flow -> forma simplificada de escrever flex-direction + flex-wrap.
+            - justify-content: mexe com o alinhamento do container em relação ao MAIN-AXIS
+            - Align-items:  mexe com o alinhamento do container em relação ao CROSS-AXIS
+            - Align-content: mexe com o alinhamento dos elementos EMPACOTADOS do container no CROSS-AXIS (se usa com "wrap"/"wrap-reverse")
+
+       ELEMENTO FILHO:       
+            - order: com ele posso mudar a ordem de um item de forma crescente (do menor ao maior). 
+            - align-self: propriedade que se aplica a cada um dos itens no sentido do eixo-transversal/cross-axis.  
+            - flex-basis: se usa para definir o tamanho de um elemento, seja com auto (padrão) ou usando pixeis (px).    
+            - flex-grow: se usa para definir o quanto um item pode crescer.
+            - flex-shrink: se usa para definir o quanto um item pode diminuir.
+            + flex: forma simplificada de flex-grow + flex-shrink + flex-grow, tendo também:
+                flex: auto flex-grow (1) + flex-shrink (1) + flex-basis (auto)
+                flex: none flex-grow (0) + flex-shrink (0) + flex-basis (auto)
+                flex: initial
+                flex-grow (0) + flex-shrink (1) + flex-basis (auto)
+
+-->
+</body>
+</html>
